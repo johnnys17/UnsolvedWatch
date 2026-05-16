@@ -28,6 +28,34 @@ export async function sbQuery(path, params = {}) {
     return res.json()
 }
 
+// Returns just the row count for a table/view + optional filters
+// Uses PostgREST's HEAD + Prefer: count=exact header — no row payload
+export async function sbCount(path, params = {}) {
+    const url = new URL(`${SUPABASE_URL}/rest/v1/${path}`)
+    url.searchParams.set('select', 'id')
+    for (const [k, v] of Object.entries(params)) {
+        url.searchParams.set(k, v)
+    }
+    const res = await fetch(url, {
+        method: 'HEAD',
+        headers: {
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+            'Prefer': 'count=exact',
+            'Range-Unit': 'items',
+            'Range': '0-0'
+        }
+    })
+    if (!res.ok) {
+        console.error(`Supabase count failed: ${res.status}`)
+        return null
+    }
+    const contentRange = res.headers.get('content-range')
+    if (!contentRange) return null
+    const total = contentRange.split('/')[1]
+    return total === '*' ? null : parseInt(total, 10)
+}
+
 // Month-name lookup
 export const MONTH_NAMES = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 

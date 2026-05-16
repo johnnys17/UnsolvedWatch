@@ -1,5 +1,5 @@
 // /js/index.js
-import { sbQuery, fmtNum, fmtPeriod } from './config.js'
+import { sbQuery, sbCount, fmtNum, fmtPeriod } from './config.js'
 
 const STATES_50 = [
     ['AL','Alabama'],['AK','Alaska'],['AZ','Arizona'],['AR','Arkansas'],['CA','California'],
@@ -16,31 +16,20 @@ const STATES_50 = [
 ]
 
 async function loadStats() {
-    // Latest scrape run for FBI refresh date
     const runs = await sbQuery('scrape_runs', {
         'select': 'fbi_last_refresh_date,fbi_max_data_date,started_at',
         'status': 'eq.success',
         'order': 'started_at.desc',
-        'limit': 1
+        'limit': '1'
     })
 
-    // Total data points (HEAD request with count header would be cheaper, but this is fine)
-    const { count: rowCount } = await fetch(`${import.meta.url.split('/js/')[0].replace('/js', '')}`, {})
-        .then(() => ({ count: null }))
-        .catch(() => ({ count: null }))
-
-    // Just count states present in crime_data
-    const stateRows = await sbQuery('crime_data', {
-        'select': 'state_abbr',
-        'jurisdiction_type': 'eq.state',
-        'limit': 10000
+    const stateCount = await sbCount('states')
+    const totalRows = await sbCount('crime_data', {
+        'jurisdiction_type': 'eq.state'
     })
-    const uniqueStates = new Set(stateRows.map(r => r.state_abbr).filter(Boolean))
 
-    document.querySelector('[data-stat="states"]').textContent = uniqueStates.size || '51'
-    document.querySelector('[data-stat="rows"]').textContent = stateRows.length >= 10000
-        ? '10,000+'
-        : fmtNum(stateRows.length)
+    document.querySelector('[data-stat="states"]').textContent = stateCount ?? 51
+    document.querySelector('[data-stat="rows"]').textContent = totalRows ? fmtNum(totalRows) : '—'
 
     const refresh = runs[0]?.fbi_last_refresh_date
     document.querySelector('[data-stat="last_refresh"]').textContent = refresh || 'Pending'
@@ -57,26 +46,46 @@ async function loadStateGrid() {
     const grid = document.getElementById('state-grid')
     if (!grid) return
 
-    // Query state_latest for ASS (aggravated assault) as a representative offense for the grid card
-    const latest = await sbQuery('state_latest', {
-        'select': 'state_abbr,period_year,period_month,offenses_count,coverage_pct',
-        'offense_code': 'eq.ASS',
-        'order': 'state_abbr.asc'
+    const now = new Date()
+    const cutoffYear = now.getFullYear() - (now.getMonth() < 2 ? 2 : 1)
+    const cutoffMonth = now.getMonth() < 2 ? now.getMonth() + 11 : now.getMonth() - 1
+
+    const rows = await sbQuery('crime_data', {
+        'select': 'state_abbr,period_year,period_month,offenses_count',
+        'jurisdiction_type': 'eq.state',
+        'offense_code': 'eq.HOM',
+        'is_annual_rollup': 'eq.false',
+        'or': `(period_year.gt.${cutoffYear},and(period_year.eq.${cutoffYear},period_month.gte.${cutoffMonth}))`,
+        'order': 'state_abbr.asc,period_year.desc,period_month.desc'
     })
 
-    const byState = Object.fromEntries(latest.map(r => [r.state_abbr, r]))
+    const byState = {}
+    for (const r of rows) {
+        if (r.offenses_count == null) continue
+        if (!byState[r.state_abbr]) {
+            byState[r.state_abbr] = { total: 0, latestYear: r.period_year, latestMonth: r.period_month, count: 0 }
+        }
+        const s = byState[r.state_abbr]
+        if (s.count < 12) {
+            s.total += Number(r.offenses_count)
+            s.count++
+        }
+    }
 
     grid.innerHTML = STATES_50.map(([abbr, name]) => {
         const d = byState[abbr]
-        const periodStr = d ? fmtPeriod(d.period_year, d.period_month) : '—'
-        const offenses = d ? fmtNum(d.offenses_count) : '—'
+        const hasData = d && d.count > 0
+        const periodStr = hasData ? fmtPeriod(d.latestYear, d.latestMonth) : '—'
+        const total = hasData ? fmtNum(d.total) : '—'
+        const noDataNote = hasData
+            ? ''
+            : '<span style="color: var(--accent-2); font-size: 0.7rem; font-style: italic;">no recent data reported</span>'
         return `
             <a href="/states/${abbr.toLowerCase()}/" class="state-card">
                 <div class="state-card-abbr">${abbr}</div>
                 <div class="state-card-name">${name}</div>
                 <div class="state-card-stat">
-                    <strong>${offenses}</strong> aggravated assaults<br>
-                    <span style="color: var(--ink-3); font-size: 0.75rem;">latest: ${periodStr}</span>
+                    ${hasData ? `<strong>${total}</strong> homicides<br><span style="color: var(--ink-3); font-size: 0.75rem;">trailing 12 months · thru ${periodStr}</span>` : noDataNote}
                 </div>
             </a>
         `
@@ -85,3 +94,4 @@ async function loadStateGrid() {
 
 loadStats().catch(console.error)
 loadStateGrid().catch(console.error)
+
