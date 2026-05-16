@@ -1,0 +1,33 @@
+[build]
+  publish = "site"
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+
+# Pretty URLs: /states/fl/ → /states/fl/index.html
+[[redirects]]
+  from = "/states/:abbr"
+  to = "/states/state.html?abbr=:abbr"
+  status = 200
+
+[[redirects]]
+  from = "/agencies/:ori"
+  to = "/agencies/agency.html?ori=:ori"
+  status = 200

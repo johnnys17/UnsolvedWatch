@@ -1,0 +1,31 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+service_role*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Supabase local
+.supabase/
+supabase/.temp/
+
+# Logs
+*.log
+
+# Archive (old experiments, kept locally only)
+_archive/

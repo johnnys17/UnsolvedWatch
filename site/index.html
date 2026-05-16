@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnsolvedWatch — Crime Data Transparency</title>
+    <meta name="description" content="Tracking FBI crime data and police reporting gaps across all 50 states. A civic accountability project.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="logo">
+                <span class="logo-mark">▢</span>
+                <span class="logo-text">UnsolvedWatch</span>
+            </a>
+            <nav>
+                <a href="/states/">States</a>
+                <a href="/agencies/">Agencies</a>
+                <a href="/gap/">The Gap</a>
+                <a href="/about/">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-label">CIVIC ACCOUNTABILITY · CRIME DATA TRANSPARENCY</div>
+                <h1 class="hero-title">
+                    <span class="line">The FBI tracks every</span>
+                    <span class="line">crime in America.</span>
+                    <span class="line accent">Except the ones that</span>
+                    <span class="line accent">never get reported.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Police reporting to the FBI is voluntary. Hundreds of agencies — including major metropolitan
+                    departments — have stopped submitting data. We track what's missing.
+                </p>
+                <div class="hero-stats" id="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value" data-stat="states">—</div>
+                        <div class="stat-label">States tracked</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" data-stat="rows">—</div>
+                        <div class="stat-label">Data points</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" data-stat="last_refresh">—</div>
+                        <div class="stat-label">FBI last refreshed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Latest crime data by state</h2>
+                    <a href="/states/" class="link-arrow">View all states →</a>
+                </div>
+                <div class="state-grid" id="state-grid">
+                    <div class="loading">Loading state data…</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-dark">
+            <div class="container">
+                <div class="callout">
+                    <div class="callout-eyebrow">THE REPORTING GAP</div>
+                    <h2 class="callout-title">
+                        When a police department stops reporting, that's the story.
+                    </h2>
+                    <p class="callout-body">
+                        FBI reporting is voluntary. After the bureau retired its old SRS system in 2021 and
+                        switched fully to NIBRS, many large agencies failed to make the transition — and have
+                        not submitted national crime data since. Some agencies issue self-reported numbers in
+                        press releases while sending nothing to the FBI. This site exists to show both.
+                    </p>
+                    <a href="/gap/" class="btn">See agencies that stopped reporting →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>How this works</h2>
+                </div>
+                <div class="grid-3">
+                    <div class="card">
+                        <div class="card-num">01</div>
+                        <h3>FBI Crime Data Explorer</h3>
+                        <p>We pull from the FBI's official Crime Data Explorer API for all 50 states and the District of Columbia, covering eight major offense categories from 1985 to present.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-num">02</div>
+                        <h3>Continuous monitoring</h3>
+                        <p>An automated process checks the FBI's data daily and pulls fresh records as soon as the bureau updates. Every scrape is logged and auditable.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-num">03</div>
+                        <h3>Gap detection</h3>
+                        <p>When agencies stop reporting, we flag them. When agencies issue press releases that conflict with their FBI submissions, that becomes a public record.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo">
+                        <span class="logo-mark">▢</span>
+                        <span class="logo-text">UnsolvedWatch</span>
+                    </div>
+                    <p class="footer-tagline">A civic accountability project by Shadow Vortex LLC.</p>
+                </div>
+                <div>
+                    <h4>Civic Tools Network</h4>
+                    <ul>
+                        <li><a href="https://courtwatch.live">CourtWatch.live</a></li>
+                        <li><a href="/">UnsolvedWatch.live</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Data</h4>
+                    <ul>
+                        <li><a href="https://cde.ucr.cjis.gov" target="_blank" rel="noopener">FBI Crime Data Explorer</a></li>
+                        <li><a href="/methodology/">Methodology</a></li>
+                        <li><a href="/about/">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span id="footer-refresh">Data refresh status loading…</span>
+                <span>© 2026 Shadow Vortex LLC</span>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/config.js"></script>
+    <script type="module" src="/js/index.js"></script>
+</body>
+</html>
