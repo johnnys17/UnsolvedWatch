@@ -358,27 +358,31 @@ def build_overlay_chart(by_offense, width=960, height=440):
         return ('<div class="overlay-chart-empty">Not enough monthly data to build the '
                 'trend overlay (need at least 13 months per offense).</div>')
 
-    # Find the common time window — earliest month shared by all offenses,
-    # latest month shared by all offenses. Align everything to that.
-    starts = [s[0] for s in rolling_series.values()]
-    ends = [s[-1] for s in rolling_series.values()]
+    # Anchor the chart to January 2023.
+    # This avoids the 2020-2022 NIBRS transition period when many U.S. agencies
+    # were still onboarding to the new reporting standard. Indexing earlier
+    # would conflate "more agencies reporting" with "more crime occurring."
+    INDEX_BASELINE_YEAR = 2023
+    INDEX_BASELINE_MONTH = 1
 
     def ym_to_idx(y, m):
         return y * 12 + (m - 1)
 
-    common_start = max(ym_to_idx(s[0], s[1]) for s in starts)
+    baseline_idx = ym_to_idx(INDEX_BASELINE_YEAR, INDEX_BASELINE_MONTH)
+    ends = [s[-1] for s in rolling_series.values()]
     common_end = min(ym_to_idx(e[0], e[1]) for e in ends)
-    if common_end <= common_start:
-        return '<div class="overlay-chart-empty">Insufficient overlapping data across offenses.</div>'
 
-    n_months = common_end - common_start + 1
+    if common_end <= baseline_idx:
+        return '<div class="overlay-chart-empty">Not enough post-2023 data to build the trend overlay.</div>'
 
-    # Index each series so its value at common_start = 100.
+    n_months = common_end - baseline_idx + 1
+
+    # Index each series so its value at Jan 2023 = 100.
     indexed = {}
     for code, series in rolling_series.items():
         baseline = None
         for y, m, total in series:
-            if ym_to_idx(y, m) == common_start:
+            if ym_to_idx(y, m) == baseline_idx:
                 baseline = total
                 break
         if not baseline or baseline <= 0:
@@ -386,13 +390,13 @@ def build_overlay_chart(by_offense, width=960, height=440):
         line = []
         for y, m, total in series:
             i = ym_to_idx(y, m)
-            if common_start <= i <= common_end:
-                line.append((i - common_start, (total / baseline) * 100))
+            if baseline_idx <= i <= common_end:
+                line.append((i - baseline_idx, (total / baseline) * 100))
         if line:
             indexed[code] = line
 
     if not indexed:
-        return '<div class="overlay-chart-empty">Could not build indexed series.</div>'
+        return '<div class="overlay-chart-empty">Could not build indexed series anchored to Jan 2023.</div>'
 
     # Y-axis scale
     all_vals = [v for line in indexed.values() for _, v in line]
@@ -434,7 +438,7 @@ def build_overlay_chart(by_offense, width=960, height=440):
     n_ticks = 5
     for k in range(n_ticks):
         i = int(k * (n_months - 1) / (n_ticks - 1))
-        ym_idx = common_start + i
+        ym_idx = baseline_idx + i
         year = ym_idx // 12
         month = (ym_idx % 12) + 1
         x_ticks.append((i, MONTH_SHORT[month], year))
@@ -607,7 +611,7 @@ def build_overlay_chart(by_offense, width=960, height=440):
     # n_months total, each with year/month label + per-offense value
     month_labels = []
     for i in range(n_months):
-        ym_idx = common_start + i
+        ym_idx = baseline_idx + i
         year = ym_idx // 12
         month = (ym_idx % 12) + 1
         month_labels.append(f"{MONTH_SHORT[month]} {year}")
@@ -775,13 +779,18 @@ def render_state_page(abbr, stats, by_offense, all_state_index_data):
         <section class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Five-year overlay</h2>
-                    <span class="section-meta">All offenses indexed to 100 at the start of the window</span>
+                    <h2 class="section-title">Crime trends since 2023</h2>
+                    <span class="section-meta">All offenses indexed to 100 at January 2023</span>
                 </div>
-                <p class="overlay-explainer">Each offense is rescaled so it starts at 100 five years ago. A line above 100 means more offenses reported now than then; below 100 means fewer. Trailing 12-month totals are used to smooth out seasonality. Hover the chart to inspect any month.</p>
+                <p class="overlay-explainer">Each offense is rescaled so it equals 100 in January 2023. A line above 100 means more offenses reported now than then; below 100 means fewer. Trailing 12-month totals are used to smooth out seasonality. Hover the chart to inspect any month.</p>
+                <p class="overlay-footnote">Indexed to January 2023 to exclude the 2020–2022 period when many U.S. law enforcement agencies were still transitioning to the FBI's NIBRS reporting standard. Including those years would conflate <em>more agencies reporting</em> with <em>more crime occurring</em>.</p>
                 <div class="overlay-chart-wrap" id="overlay-chart-wrap">
                     {overlay_svg}
                     <div id="overlay-tooltip" class="overlay-tooltip" aria-hidden="true"></div>
+                </div>
+                <div class="chart-caveat">
+                    <h3 class="chart-caveat-heading">How to read this chart</h3>
+                    <p class="chart-caveat-body">A declining line can mean several things: fewer crimes occurred (effective policing, courts, or deterrence at work), fewer crimes were reported (agencies dropped out of NIBRS), or crimes were reclassified into different categories. A rising line carries the same ambiguity in reverse. FBI data captures only what agencies submit — see <a href="/gap/">The Gap</a> to verify which agencies in {name} are still reporting.</p>
                 </div>
             </div>
         </section>

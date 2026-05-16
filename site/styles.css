@@ -1453,3 +1453,66 @@ svg.spark { display: inline-block; vertical-align: middle; max-width: 100%; heig
         padding-right: 1rem;
     }
 }
+
+/* === UnsolvedWatch — overlay footnote (Jan 2023 baseline note) === */
+
+.overlay-footnote {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: var(--ink, #0a1f3d);
+    opacity: 0.62;
+    max-width: 62ch;
+    margin: -0.5rem 0 1.75rem 0;
+    padding-left: 0.85rem;
+    border-left: 2px solid var(--gold, #a37c2c);
+}
+
+.overlay-footnote em {
+    font-style: italic;
+    opacity: 0.85;
+}
+
+/* === UnsolvedWatch — chart caveat block (post-chart reading guide) === */
+
+.chart-caveat {
+    margin: 2.25rem 0 0 0;
+    padding: 1.5rem 1.75rem;
+    background: rgba(10, 31, 61, 0.04);
+    border-left: 3px solid var(--navy, #0a1f3d);
+    max-width: 72ch;
+}
+
+.chart-caveat-heading {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--navy, #0a1f3d);
+    margin: 0 0 0.65rem 0;
+    opacity: 0.85;
+}
+
+.chart-caveat-body {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 1.0rem;
+    line-height: 1.62;
+    color: var(--ink, #0a1f3d);
+    opacity: 0.82;
+    margin: 0;
+}
+
+.chart-caveat-body a {
+    color: var(--navy, #0a1f3d);
+    text-decoration: underline;
+    text-decoration-color: var(--gold, #a37c2c);
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+    font-weight: 500;
+}
+
+.chart-caveat-body a:hover {
+    color: var(--red, #b8222d);
+    text-decoration-color: var(--red, #b8222d);
+}
