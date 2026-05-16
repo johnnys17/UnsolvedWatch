@@ -1267,3 +1267,189 @@ svg.spark { display: inline-block; vertical-align: middle; max-width: 100%; heig
     color: var(--ink-soft);
     letter-spacing: 0.03em;
 }
+/* =========================================================================
+   UnsolvedWatch — state page additions
+   Append this block to site/styles.css
+   
+   Adds:
+     - Simplified state hero (no duplicate homicide stat box)
+     - Color swatches in offense table (legend keys to overlay chart)
+     - Overlay chart styling (8 offenses on one set of axes)
+   ========================================================================= */
+
+/* --- Simplified hero (replaces the two-column hero with the stat box) -- */
+
+.state-hero--simple .breadcrumb {
+    display: inline-block;
+    margin-bottom: 2.5rem;
+}
+
+.state-hero--simple .state-eyebrow {
+    margin-bottom: 0.5rem;
+}
+
+.state-hero--simple .state-name {
+    margin-bottom: 0.5rem;
+}
+
+.state-hero--simple .state-dateline {
+    margin-bottom: 0;
+}
+
+
+/* --- Color swatches in the offense table ------------------------------- */
+
+.offense-swatch {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    margin-right: 0.6rem;
+    vertical-align: middle;
+    transform: translateY(-1px);
+}
+
+.offense-row--nodata .offense-swatch {
+    opacity: 0.35;
+}
+
+
+/* --- Five-year overlay chart ------------------------------------------- */
+
+.overlay-explainer {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    color: var(--ink, #0a1f3d);
+    opacity: 0.78;
+    max-width: 60ch;
+    margin: 0 0 1.75rem 0;
+    font-style: italic;
+}
+
+.overlay-chart-wrap {
+    width: 100%;
+    overflow-x: auto;
+    padding: 1rem 0 0.5rem 0;
+}
+
+.overlay-chart {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 820px; /* preserve readability on narrow screens — scroll instead of squish */
+    max-width: 100%;
+}
+
+.overlay-axis-label {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px;
+    font-weight: 500;
+    fill: var(--ink, #0a1f3d);
+    opacity: 0.6;
+    font-variant-numeric: tabular-nums;
+}
+
+.overlay-end-label {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: 0.005em;
+}
+
+.overlay-end-value {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    font-weight: 500;
+    opacity: 0.65;
+    font-variant-numeric: tabular-nums;
+}
+
+.overlay-hover-month-label {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px;
+    font-weight: 600;
+    fill: var(--ink, #0a1f3d);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* --- Floating tooltip near cursor ----------------------------------- */
+
+.overlay-chart-wrap {
+    position: relative;
+}
+
+.overlay-tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: var(--paper, #f4ede0);
+    border: 0.5px solid #0a1f3d;
+    border-radius: 2px;
+    padding: 8px 10px;
+    min-width: 168px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    opacity: 0;
+    transition: opacity 0.12s ease-out;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(10, 31, 61, 0.12);
+}
+
+.overlay-tooltip.is-visible {
+    opacity: 1;
+}
+
+.overlay-tooltip-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.overlay-tooltip-swatch {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 1px;
+    flex-shrink: 0;
+}
+
+.overlay-tooltip-name {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 500;
+    color: var(--ink, #0a1f3d);
+    flex: 1;
+}
+
+.overlay-tooltip-value {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-weight: 600;
+    color: var(--ink, #0a1f3d);
+    font-variant-numeric: tabular-nums;
+    min-width: 32px;
+    text-align: right;
+}
+
+.overlay-chart-empty {
+    font-family: "Newsreader", Georgia, serif;
+    font-style: italic;
+    color: var(--ink, #0a1f3d);
+    opacity: 0.55;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+
+/* --- Responsive tweaks ------------------------------------------------- */
+
+@media (max-width: 720px) {
+    .overlay-chart-wrap {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

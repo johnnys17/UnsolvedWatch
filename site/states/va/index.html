@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virginia crime data — UnsolvedWatch</title>
-    <meta name="description" content="FBI crime data for Virginia. Data may not yet be reported.">
+    <meta name="description" content="FBI Uniform Crime Reporting data for Virginia: 278 homicides reported in the trailing 12 months (3.2 per 100,000 residents).">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -32,22 +32,12 @@
     </header>
 
     <main>
-        <section class="state-hero">
+        <section class="state-hero state-hero--simple">
             <div class="container">
                 <a href="/" class="breadcrumb">← Back to map</a>
-                <div class="state-hero-grid">
-                    <div class="state-hero-main">
-                        <div class="state-eyebrow">State of <span class="abbr-tag">VA</span> · Pop. 8,715,698</div>
-                        <h1 class="state-name">Virginia</h1>
-                        <p class="state-dateline">Crime data through — · trailing 12 months</p>
-                    </div>
-                    <div class="state-hero-stat">
-                        <div class="state-hero-stat-value">0</div>
-                        <div class="state-hero-stat-label">Homicides reported</div>
-                        <div class="state-hero-stat-rate">0.0 <span>per 100k</span></div>
-                        <div class="state-hero-stat-yoy yoy--neutral">YoY —</div>
-                    </div>
-                </div>
+                <div class="state-eyebrow">State of <span class="abbr-tag">VA</span> · Pop. 8,715,698</div>
+                <h1 class="state-name">Virginia</h1>
+                <p class="state-dateline">Crime data through April 2026 · trailing 12 months</p>
             </div>
         </section>
 
@@ -70,62 +60,110 @@
                         </thead>
                         <tbody>
                             
-            <tr class="offense-row offense-row--nodata">
-                <td class="offense-name">Homicide</td>
-                <td class="offense-count">—</td>
-                <td class="offense-rate">—</td>
-                <td class="offense-yoy">—</td>
-                <td class="offense-spark"></td>
-            </tr>
-            <tr class="offense-row offense-row--nodata">
-                <td class="offense-name">Rape</td>
-                <td class="offense-count">—</td>
-                <td class="offense-rate">—</td>
-                <td class="offense-yoy">—</td>
-                <td class="offense-spark"></td>
-            </tr>
-            <tr class="offense-row offense-row--nodata">
-                <td class="offense-name">Robbery</td>
-                <td class="offense-count">—</td>
-                <td class="offense-rate">—</td>
-                <td class="offense-yoy">—</td>
-                <td class="offense-spark"></td>
-            </tr>
-            <tr class="offense-row offense-row--nodata">
-                <td class="offense-name">Aggravated assault</td>
-                <td class="offense-count">—</td>
-                <td class="offense-rate">—</td>
-                <td class="offense-yoy">—</td>
-                <td class="offense-spark"></td>
-            </tr>
-            <tr class="offense-row offense-row--nodata">
-                <td class="offense-name">Burglary</td>
-                <td class="offense-count">—</td>
-                <td class="offense-rate">—</td>
-                <td class="offense-yoy">—</td>
-                <td class="offense-spark"></td>
-            </tr>
-            <tr class="offense-row offense-row--nodata">
-                <td class="offense-name">Larceny</td>
-                <td class="offense-count">—</td>
-                <td class="offense-rate">—</td>
-                <td class="offense-yoy">—</td>
-                <td class="offense-spark"></td>
-            </tr>
-            <tr class="offense-row offense-row--nodata">
-                <td class="offense-name">Motor vehicle theft</td>
-                <td class="offense-count">—</td>
-                <td class="offense-rate">—</td>
-                <td class="offense-yoy">—</td>
-                <td class="offense-spark"></td>
-            </tr>
-            <tr class="offense-row offense-row--nodata">
-                <td class="offense-name">Arson</td>
-                <td class="offense-count">—</td>
-                <td class="offense-rate">—</td>
-                <td class="offense-yoy">—</td>
-                <td class="offense-spark"></td>
-            </tr>
+        <tr class="offense-row">
+            <td class="offense-name">
+                <span class="offense-swatch" style="background:#0a1f3d"></span>
+                Homicide
+            </td>
+            <td class="offense-count">278</td>
+            <td class="offense-rate">3.2</td>
+            <td class="offense-yoy offense-yoy--down">-35.3%</td>
+            <td class="offense-spark"><svg class="spark" width="200" height="40" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0.0,15.3 L 3.4,14.2 L 6.8,0.0 L 10.2,15.9 L 13.6,14.2 L 16.9,14.8 L 20.3,9.9 L 23.7,9.3 L 27.1,13.2 L 30.5,17.5 L 33.9,15.3 L 37.3,12.6 L 40.7,8.2 L 44.1,3.3 L 47.5,11.5 L 50.8,14.2 L 54.2,11.5 L 57.6,13.2 L 61.0,6.0 L 64.4,15.3 L 67.8,12.1 L 71.2,13.2 L 74.6,19.2 L 78.0,12.6 L 81.4,15.3 L 84.7,13.2 L 88.1,12.6 L 91.5,12.6 L 94.9,14.8 L 98.3,17.5 L 101.7,24.1 L 105.1,27.4 L 108.5,24.7 L 111.9,22.5 L 115.3,20.8 L 118.6,16.4 L 122.0,20.8 L 125.4,15.9 L 128.8,21.9 L 132.2,22.5 L 135.6,18.1 L 139.0,22.5 L 142.4,23.6 L 145.8,23.6 L 149.2,27.4 L 152.5,20.3 L 155.9,25.2 L 159.3,15.9 L 162.7,26.3 L 166.1,21.9 L 169.5,24.1 L 172.9,23.0 L 176.3,22.5 L 179.7,25.8 L 183.1,27.9 L 186.4,30.1 L 189.8,29.6 L 193.2,32.9 L 196.6,36.7 L 200.0,40.0" fill="none" stroke="var(--red)" stroke-width="1.5" />
+        <circle cx="200.0" cy="40.0" r="2.5" fill="var(--ink)" />
+    </svg></td>
+        </tr>
+        <tr class="offense-row">
+            <td class="offense-name">
+                <span class="offense-swatch" style="background:#b8222d"></span>
+                Rape
+            </td>
+            <td class="offense-count">1,711</td>
+            <td class="offense-rate">19.6</td>
+            <td class="offense-yoy offense-yoy--down">-31.0%</td>
+            <td class="offense-spark"><svg class="spark" width="200" height="40" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0.0,6.8 L 3.4,4.4 L 6.8,4.7 L 10.2,4.0 L 13.6,5.5 L 16.9,8.2 L 20.3,11.0 L 23.7,8.1 L 27.1,7.6 L 30.5,10.7 L 33.9,0.0 L 37.3,12.6 L 40.7,7.2 L 44.1,10.0 L 47.5,6.9 L 50.8,7.2 L 54.2,3.5 L 57.6,6.4 L 61.0,14.1 L 64.4,6.8 L 67.8,8.3 L 71.2,8.5 L 74.6,2.5 L 78.0,5.2 L 81.4,4.9 L 84.7,9.3 L 88.1,6.9 L 91.5,9.5 L 94.9,9.8 L 98.3,6.9 L 101.7,16.4 L 105.1,13.1 L 108.5,12.7 L 111.9,11.7 L 115.3,8.8 L 118.6,10.5 L 122.0,6.4 L 125.4,11.2 L 128.8,8.9 L 132.2,12.3 L 135.6,6.8 L 139.0,8.1 L 142.4,16.0 L 145.8,16.3 L 149.2,16.4 L 152.5,19.4 L 155.9,13.6 L 159.3,13.3 L 162.7,17.5 L 166.1,15.4 L 169.5,13.4 L 172.9,14.4 L 176.3,14.7 L 179.7,18.4 L 183.1,19.9 L 186.4,23.2 L 189.8,25.9 L 193.2,27.0 L 196.6,27.0 L 200.0,40.0" fill="none" stroke="var(--red)" stroke-width="1.5" />
+        <circle cx="200.0" cy="40.0" r="2.5" fill="var(--ink)" />
+    </svg></td>
+        </tr>
+        <tr class="offense-row">
+            <td class="offense-name">
+                <span class="offense-swatch" style="background:#a37c2c"></span>
+                Robbery
+            </td>
+            <td class="offense-count">2,069</td>
+            <td class="offense-rate">23.7</td>
+            <td class="offense-yoy offense-yoy--down">-29.1%</td>
+            <td class="offense-spark"><svg class="spark" width="200" height="40" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0.0,9.0 L 3.4,11.8 L 6.8,9.0 L 10.2,10.4 L 13.6,7.2 L 16.9,1.5 L 20.3,1.0 L 23.7,8.7 L 27.1,8.2 L 30.5,9.2 L 33.9,10.1 L 37.3,4.2 L 40.7,4.4 L 44.1,8.7 L 47.5,5.3 L 50.8,3.2 L 54.2,3.5 L 57.6,2.8 L 61.0,0.0 L 64.4,3.4 L 67.8,6.3 L 71.2,8.2 L 74.6,6.3 L 78.0,3.7 L 81.4,3.8 L 84.7,5.2 L 88.1,7.0 L 91.5,3.8 L 94.9,5.2 L 98.3,6.5 L 101.7,4.8 L 105.1,5.2 L 108.5,7.3 L 111.9,15.8 L 115.3,13.0 L 118.6,9.5 L 122.0,11.5 L 125.4,9.6 L 128.8,7.7 L 132.2,8.4 L 135.6,10.0 L 139.0,5.4 L 142.4,6.6 L 145.8,10.9 L 149.2,9.5 L 152.5,11.4 L 155.9,14.6 L 159.3,13.9 L 162.7,13.3 L 166.1,11.8 L 169.5,10.9 L 172.9,9.6 L 176.3,13.0 L 179.7,12.2 L 183.1,14.7 L 186.4,19.6 L 189.8,24.9 L 193.2,28.2 L 196.6,29.0 L 200.0,40.0" fill="none" stroke="var(--red)" stroke-width="1.5" />
+        <circle cx="200.0" cy="40.0" r="2.5" fill="var(--ink)" />
+    </svg></td>
+        </tr>
+        <tr class="offense-row">
+            <td class="offense-name">
+                <span class="offense-swatch" style="background:#5e6b3a"></span>
+                Aggravated assault
+            </td>
+            <td class="offense-count">10,963</td>
+            <td class="offense-rate">125.8</td>
+            <td class="offense-yoy offense-yoy--down">-19.2%</td>
+            <td class="offense-spark"><svg class="spark" width="200" height="40" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0.0,3.2 L 3.4,7.1 L 6.8,7.3 L 10.2,3.4 L 13.6,7.7 L 16.9,5.7 L 20.3,10.2 L 23.7,6.5 L 27.1,11.4 L 30.5,12.6 L 33.9,8.2 L 37.3,4.5 L 40.7,1.5 L 44.1,2.5 L 47.5,1.2 L 50.8,3.5 L 54.2,5.5 L 57.6,6.1 L 61.0,10.2 L 64.4,10.1 L 67.8,6.7 L 71.2,10.2 L 74.6,6.0 L 78.0,3.4 L 81.4,1.1 L 84.7,3.5 L 88.1,0.0 L 91.5,5.2 L 94.9,5.9 L 98.3,4.4 L 101.7,7.8 L 105.1,5.7 L 108.5,8.8 L 111.9,12.4 L 115.3,10.7 L 118.6,5.8 L 122.0,2.3 L 125.4,1.1 L 128.8,5.1 L 132.2,7.4 L 135.6,6.9 L 139.0,6.4 L 142.4,6.3 L 145.8,11.7 L 149.2,11.6 L 152.5,13.1 L 155.9,7.0 L 159.3,9.0 L 162.7,2.3 L 166.1,6.2 L 169.5,2.0 L 172.9,4.2 L 176.3,7.5 L 179.7,8.8 L 183.1,12.9 L 186.4,14.3 L 189.8,22.1 L 193.2,24.8 L 196.6,23.5 L 200.0,40.0" fill="none" stroke="var(--red)" stroke-width="1.5" />
+        <circle cx="200.0" cy="40.0" r="2.5" fill="var(--ink)" />
+    </svg></td>
+        </tr>
+        <tr class="offense-row">
+            <td class="offense-name">
+                <span class="offense-swatch" style="background:#4a5a6b"></span>
+                Burglary
+            </td>
+            <td class="offense-count">6,139</td>
+            <td class="offense-rate">70.4</td>
+            <td class="offense-yoy offense-yoy--down">-33.5%</td>
+            <td class="offense-spark"><svg class="spark" width="200" height="40" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0.0,7.0 L 3.4,7.2 L 6.8,8.2 L 10.2,9.5 L 13.6,7.7 L 16.9,5.5 L 20.3,5.8 L 23.7,4.8 L 27.1,10.7 L 30.5,9.6 L 33.9,9.8 L 37.3,11.0 L 40.7,5.6 L 44.1,3.9 L 47.5,4.9 L 50.8,4.9 L 54.2,9.6 L 57.6,0.0 L 61.0,6.8 L 64.4,4.0 L 67.8,6.9 L 71.2,12.5 L 74.6,10.3 L 78.0,8.9 L 81.4,7.4 L 84.7,5.6 L 88.1,6.4 L 91.5,3.8 L 94.9,8.2 L 98.3,7.2 L 101.7,9.2 L 105.1,8.3 L 108.5,12.1 L 111.9,13.4 L 115.3,8.3 L 118.6,13.3 L 122.0,12.0 L 125.4,11.6 L 128.8,11.0 L 132.2,10.9 L 135.6,7.0 L 139.0,10.1 L 142.4,12.8 L 145.8,13.1 L 149.2,16.1 L 152.5,19.2 L 155.9,15.7 L 159.3,13.3 L 162.7,16.5 L 166.1,17.4 L 169.5,17.0 L 172.9,15.3 L 176.3,18.6 L 179.7,17.5 L 183.1,19.0 L 186.4,22.8 L 189.8,25.7 L 193.2,28.8 L 196.6,30.2 L 200.0,40.0" fill="none" stroke="var(--red)" stroke-width="1.5" />
+        <circle cx="200.0" cy="40.0" r="2.5" fill="var(--ink)" />
+    </svg></td>
+        </tr>
+        <tr class="offense-row">
+            <td class="offense-name">
+                <span class="offense-swatch" style="background:#8a5a48"></span>
+                Larceny
+            </td>
+            <td class="offense-count">81,624</td>
+            <td class="offense-rate">936.5</td>
+            <td class="offense-yoy offense-yoy--down">-28.5%</td>
+            <td class="offense-spark"><svg class="spark" width="200" height="40" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0.0,10.0 L 3.4,8.7 L 6.8,8.1 L 10.2,7.7 L 13.6,6.7 L 16.9,4.8 L 20.3,6.9 L 23.7,4.5 L 27.1,9.8 L 30.5,9.0 L 33.9,5.4 L 37.3,4.5 L 40.7,1.8 L 44.1,1.2 L 47.5,0.0 L 50.8,0.1 L 54.2,2.3 L 57.6,1.4 L 61.0,4.2 L 64.4,2.6 L 67.8,4.2 L 71.2,9.0 L 74.6,6.1 L 78.0,5.5 L 81.4,3.1 L 84.7,4.2 L 88.1,3.0 L 91.5,1.7 L 94.9,5.9 L 98.3,3.7 L 101.7,6.1 L 105.1,3.4 L 108.5,6.0 L 111.9,8.6 L 115.3,7.3 L 118.6,6.6 L 122.0,4.9 L 125.4,2.2 L 128.8,1.4 L 132.2,6.0 L 135.6,4.2 L 139.0,4.3 L 142.4,6.9 L 145.8,9.2 L 149.2,9.5 L 152.5,11.8 L 155.9,9.0 L 159.3,8.6 L 162.7,6.6 L 166.1,8.6 L 169.5,8.1 L 172.9,9.9 L 176.3,10.2 L 179.7,9.0 L 183.1,12.2 L 186.4,15.8 L 189.8,23.3 L 193.2,26.9 L 196.6,26.8 L 200.0,40.0" fill="none" stroke="var(--red)" stroke-width="1.5" />
+        <circle cx="200.0" cy="40.0" r="2.5" fill="var(--ink)" />
+    </svg></td>
+        </tr>
+        <tr class="offense-row">
+            <td class="offense-name">
+                <span class="offense-swatch" style="background:#6b4a6b"></span>
+                Motor vehicle theft
+            </td>
+            <td class="offense-count">8,064</td>
+            <td class="offense-rate">92.5</td>
+            <td class="offense-yoy offense-yoy--down">-30.7%</td>
+            <td class="offense-spark"><svg class="spark" width="200" height="40" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0.0,14.5 L 3.4,15.4 L 6.8,14.1 L 10.2,13.3 L 13.6,15.6 L 16.9,11.8 L 20.3,11.5 L 23.7,8.8 L 27.1,11.9 L 30.5,11.5 L 33.9,11.3 L 37.3,12.3 L 40.7,11.9 L 44.1,8.0 L 47.5,4.8 L 50.8,5.9 L 54.2,7.3 L 57.6,5.6 L 61.0,8.6 L 64.4,6.5 L 67.8,8.6 L 71.2,13.5 L 74.6,10.3 L 78.0,7.7 L 81.4,3.7 L 84.7,2.4 L 88.1,0.0 L 91.5,1.8 L 94.9,4.2 L 98.3,3.5 L 101.7,7.6 L 105.1,9.4 L 108.5,8.4 L 111.9,12.1 L 115.3,10.5 L 118.6,11.4 L 122.0,10.8 L 125.4,4.8 L 128.8,8.0 L 132.2,10.7 L 135.6,13.7 L 139.0,12.0 L 142.4,17.0 L 145.8,18.2 L 149.2,18.1 L 152.5,21.7 L 155.9,18.5 L 159.3,17.9 L 162.7,13.9 L 166.1,13.1 L 169.5,14.3 L 172.9,17.5 L 176.3,20.2 L 179.7,18.3 L 183.1,22.3 L 186.4,21.8 L 189.8,27.3 L 193.2,31.0 L 196.6,31.3 L 200.0,40.0" fill="none" stroke="var(--red)" stroke-width="1.5" />
+        <circle cx="200.0" cy="40.0" r="2.5" fill="var(--ink)" />
+    </svg></td>
+        </tr>
+        <tr class="offense-row">
+            <td class="offense-name">
+                <span class="offense-swatch" style="background:#9c6a6a"></span>
+                Arson
+            </td>
+            <td class="offense-count">378</td>
+            <td class="offense-rate">4.3</td>
+            <td class="offense-yoy offense-yoy--down">-34.7%</td>
+            <td class="offense-spark"><svg class="spark" width="200" height="40" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0.0,9.9 L 3.4,13.0 L 6.8,11.4 L 10.2,12.5 L 13.6,15.1 L 16.9,11.4 L 20.3,14.0 L 23.7,4.7 L 27.1,14.5 L 30.5,9.9 L 33.9,0.0 L 37.3,9.4 L 40.7,16.6 L 44.1,14.0 L 47.5,8.8 L 50.8,15.1 L 54.2,15.1 L 57.6,17.7 L 61.0,14.5 L 64.4,23.4 L 67.8,9.9 L 71.2,14.0 L 74.6,11.4 L 78.0,4.7 L 81.4,15.1 L 84.7,17.7 L 88.1,11.4 L 91.5,17.7 L 94.9,12.5 L 98.3,15.6 L 101.7,9.9 L 105.1,14.5 L 108.5,20.8 L 111.9,14.5 L 115.3,8.3 L 118.6,7.3 L 122.0,19.2 L 125.4,17.1 L 128.8,14.5 L 132.2,16.1 L 135.6,23.4 L 139.0,11.9 L 142.4,7.8 L 145.8,14.0 L 149.2,19.7 L 152.5,16.6 L 155.9,18.7 L 159.3,12.5 L 162.7,13.0 L 166.1,22.9 L 169.5,26.0 L 172.9,20.8 L 176.3,21.3 L 179.7,18.2 L 183.1,24.4 L 186.4,18.7 L 189.8,29.6 L 193.2,29.6 L 196.6,31.7 L 200.0,40.0" fill="none" stroke="var(--red)" stroke-width="1.5" />
+        <circle cx="200.0" cy="40.0" r="2.5" fill="var(--ink)" />
+    </svg></td>
+        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -135,11 +173,13 @@
         <section class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">What this data says</h2>
+                    <h2 class="section-title">Five-year overlay</h2>
+                    <span class="section-meta">All offenses indexed to 100 at the start of the window</span>
                 </div>
-                <div class="narrative">
-                    <p>Virginia has not yet submitted homicide data to the FBI for a complete trailing 12-month window — or the data has not yet been published. This is itself a story: when states or their largest police departments don't report, the national picture has blind spots.</p>
-<p class='narrative-meta'>All figures are pulled directly from the FBI's Crime Data Explorer, which aggregates monthly submissions from local law enforcement agencies. Numbers reflect offenses reported to police — not all crime, and not crime that was solved. Rate calculations use 2024 U.S. Census Bureau population estimates.</p>
+                <p class="overlay-explainer">Each offense is rescaled so it starts at 100 five years ago. A line above 100 means more offenses reported now than then; below 100 means fewer. Trailing 12-month totals are used to smooth out seasonality. Hover the chart to inspect any month.</p>
+                <div class="overlay-chart-wrap" id="overlay-chart-wrap">
+                    <svg class="overlay-chart" viewBox="0 0 960 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five-year trend lines for all 8 FBI Part I offenses, indexed to 100 at the start of the window. Hover to see values for a specific month."><rect x="56" y="28" width="694" height="376" fill="var(--paper, #f4ede0)" stroke="none" /><line x1="56" y1="379.4" x2="750" y2="379.4" stroke="#d4c8b0" stroke-width="0.5" opacity="0.6" stroke-dasharray="2,3" /><text x="48" y="383.4" text-anchor="end" class="overlay-axis-label">50</text><line x1="56" y1="344.3" x2="750" y2="344.3" stroke="#d4c8b0" stroke-width="0.5" opacity="0.6" stroke-dasharray="2,3" /><text x="48" y="348.3" text-anchor="end" class="overlay-axis-label">60</text><line x1="56" y1="309.2" x2="750" y2="309.2" stroke="#d4c8b0" stroke-width="0.5" opacity="0.6" stroke-dasharray="2,3" /><text x="48" y="313.2" text-anchor="end" class="overlay-axis-label">70</text><line x1="56" y1="274.0" x2="750" y2="274.0" stroke="#d4c8b0" stroke-width="0.5" opacity="0.6" stroke-dasharray="2,3" /><text x="48" y="278.0" text-anchor="end" class="overlay-axis-label">80</text><line x1="56" y1="238.9" x2="750" y2="238.9" stroke="#d4c8b0" stroke-width="0.5" opacity="0.6" stroke-dasharray="2,3" /><text x="48" y="242.9" text-anchor="end" class="overlay-axis-label">90</text><line x1="56" y1="203.7" x2="750" y2="203.7" stroke="#0a1f3d" stroke-width="1" opacity="0.4"  /><text x="48" y="207.7" text-anchor="end" class="overlay-axis-label">100</text><line x1="56" y1="168.6" x2="750" y2="168.6" stroke="#d4c8b0" stroke-width="0.5" opacity="0.6" stroke-dasharray="2,3" /><text x="48" y="172.6" text-anchor="end" class="overlay-axis-label">110</text><line x1="56" y1="133.4" x2="750" y2="133.4" stroke="#d4c8b0" stroke-width="0.5" opacity="0.6" stroke-dasharray="2,3" /><text x="48" y="137.4" text-anchor="end" class="overlay-axis-label">120</text><line x1="56" y1="98.3" x2="750" y2="98.3" stroke="#d4c8b0" stroke-width="0.5" opacity="0.6" stroke-dasharray="2,3" /><text x="48" y="102.3" text-anchor="end" class="overlay-axis-label">130</text><line x1="56" y1="63.1" x2="750" y2="63.1" stroke="#d4c8b0" stroke-width="0.5" opacity="0.6" stroke-dasharray="2,3" /><text x="48" y="67.1" text-anchor="end" class="overlay-axis-label">140</text><line x1="56" y1="28.0" x2="750" y2="28.0" stroke="#d4c8b0" stroke-width="0.5" opacity="0.6" stroke-dasharray="2,3" /><text x="48" y="32.0" text-anchor="end" class="overlay-axis-label">150</text><line x1="56.0" y1="28" x2="56.0" y2="404" stroke="#b8a888" stroke-width="0.6" opacity="0.55" /><line x1="69.3" y1="28" x2="69.3" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="82.7" y1="28" x2="82.7" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="96.0" y1="28" x2="96.0" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="109.4" y1="28" x2="109.4" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="122.7" y1="28" x2="122.7" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="136.1" y1="28" x2="136.1" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="149.4" y1="28" x2="149.4" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="162.8" y1="28" x2="162.8" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="176.1" y1="28" x2="176.1" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="189.5" y1="28" x2="189.5" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="202.8" y1="28" x2="202.8" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="216.2" y1="28" x2="216.2" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="229.5" y1="28" x2="229.5" y2="404" stroke="#b8a888" stroke-width="0.6" opacity="0.55" /><line x1="242.8" y1="28" x2="242.8" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="256.2" y1="28" x2="256.2" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="269.5" y1="28" x2="269.5" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="282.9" y1="28" x2="282.9" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="296.2" y1="28" x2="296.2" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="309.6" y1="28" x2="309.6" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="322.9" y1="28" x2="322.9" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="336.3" y1="28" x2="336.3" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="349.6" y1="28" x2="349.6" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="363.0" y1="28" x2="363.0" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="376.3" y1="28" x2="376.3" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="389.7" y1="28" x2="389.7" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="403.0" y1="28" x2="403.0" y2="404" stroke="#b8a888" stroke-width="0.6" opacity="0.55" /><line x1="416.3" y1="28" x2="416.3" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="429.7" y1="28" x2="429.7" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="443.0" y1="28" x2="443.0" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="456.4" y1="28" x2="456.4" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="469.7" y1="28" x2="469.7" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="483.1" y1="28" x2="483.1" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="496.4" y1="28" x2="496.4" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="509.8" y1="28" x2="509.8" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="523.1" y1="28" x2="523.1" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="536.5" y1="28" x2="536.5" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="549.8" y1="28" x2="549.8" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="563.2" y1="28" x2="563.2" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="576.5" y1="28" x2="576.5" y2="404" stroke="#b8a888" stroke-width="0.6" opacity="0.55" /><line x1="589.8" y1="28" x2="589.8" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="603.2" y1="28" x2="603.2" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="616.5" y1="28" x2="616.5" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="629.9" y1="28" x2="629.9" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="643.2" y1="28" x2="643.2" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="656.6" y1="28" x2="656.6" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="669.9" y1="28" x2="669.9" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="683.3" y1="28" x2="683.3" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="696.6" y1="28" x2="696.6" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="710.0" y1="28" x2="710.0" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="723.3" y1="28" x2="723.3" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="736.7" y1="28" x2="736.7" y2="404" stroke="#c8bca0" stroke-width="0.4" opacity="0.28" /><line x1="750.0" y1="28" x2="750.0" y2="404" stroke="#b8a888" stroke-width="0.6" opacity="0.55" /><text x="56.0" y="424" text-anchor="middle" class="overlay-axis-label">Dec 21</text><text x="229.5" y="424" text-anchor="middle" class="overlay-axis-label">Jan 23</text><text x="403.0" y="424" text-anchor="middle" class="overlay-axis-label">Feb 24</text><text x="576.5" y="424" text-anchor="middle" class="overlay-axis-label">Mar 25</text><text x="750.0" y="424" text-anchor="middle" class="overlay-axis-label">Apr 26</text><path d="M 56.0,203.7 L 69.3,201.8 L 82.7,194.0 L 96.0,185.4 L 109.4,175.9 L 122.7,168.4 L 136.1,161.4 L 149.4,153.9 L 162.8,146.9 L 176.1,142.9 L 189.5,139.7 L 202.8,137.2 L 216.2,135.5 L 229.5,130.2 L 242.8,130.3 L 256.2,131.0 L 269.5,131.9 L 282.9,133.2 L 296.2,135.9 L 309.6,138.7 L 322.9,140.1 L 336.3,143.5 L 349.6,145.6 L 363.0,147.4 L 376.3,148.2 L 389.7,149.9 L 403.0,149.5 L 416.3,150.6 L 429.7,151.6 L 443.0,153.2 L 456.4,151.4 L 469.7,150.0 L 483.1,154.0 L 496.4,152.4 L 509.8,153.0 L 523.1,153.7 L 536.5,159.1 L 549.8,162.3 L 563.2,165.2 L 576.5,166.8 L 589.8,168.7 L 603.2,170.3 L 616.5,176.2 L 629.9,182.3 L 643.2,185.9 L 656.6,191.4 L 669.9,195.8 L 683.3,200.7 L 696.6,206.8 L 710.0,219.5 L 723.3,233.4 L 736.7,249.9 L 750.0,278.8" fill="none" stroke="#8a5a48" stroke-width="1.4" opacity="0.85" stroke-linejoin="round" stroke-linecap="round" /><circle cx="750.0" cy="278.8" r="3.5" fill="#8a5a48" data-offense="LAR" class="overlay-endpoint-dot" /><path d="M 56.0,203.7 L 69.3,206.6 L 82.7,201.4 L 96.0,199.0 L 109.4,199.8 L 122.7,198.6 L 136.1,195.7 L 149.4,192.8 L 162.8,188.8 L 176.1,190.4 L 189.5,185.5 L 202.8,186.4 L 216.2,185.7 L 229.5,182.3 L 242.8,184.9 L 256.2,185.3 L 269.5,183.5 L 282.9,185.1 L 296.2,186.5 L 309.6,187.8 L 322.9,186.8 L 336.3,185.6 L 349.6,192.0 L 363.0,194.1 L 376.3,197.9 L 389.7,202.5 L 403.0,203.3 L 416.3,201.6 L 429.7,205.5 L 443.0,209.6 L 456.4,214.8 L 469.7,218.9 L 483.1,225.2 L 496.4,224.1 L 509.8,226.7 L 523.1,229.8 L 536.5,234.1 L 549.8,237.6 L 563.2,242.8 L 576.5,249.3 L 589.8,249.3 L 603.2,253.3 L 616.5,258.4 L 629.9,263.7 L 643.2,267.6 L 656.6,277.9 L 669.9,284.4 L 683.3,289.9 L 696.6,298.4 L 710.0,306.9 L 723.3,315.3 L 736.7,328.1 L 750.0,351.6" fill="none" stroke="#4a5a6b" stroke-width="1.4" opacity="0.85" stroke-linejoin="round" stroke-linecap="round" /><circle cx="750.0" cy="351.6" r="3.5" fill="#4a5a6b" data-offense="BUR" class="overlay-endpoint-dot" /><path d="M 56.0,203.7 L 69.3,202.1 L 82.7,188.3 L 96.0,177.7 L 109.4,180.4 L 122.7,187.3 L 136.1,188.3 L 149.4,185.7 L 162.8,188.3 L 176.1,188.3 L 189.5,194.7 L 202.8,195.2 L 216.2,214.3 L 229.5,209.6 L 242.8,213.8 L 256.2,225.5 L 269.5,220.7 L 282.9,219.1 L 296.2,222.8 L 309.6,225.5 L 322.9,228.1 L 336.3,225.5 L 349.6,223.4 L 363.0,218.6 L 376.3,209.6 L 389.7,220.7 L 403.0,221.2 L 416.3,218.1 L 429.7,220.7 L 443.0,225.0 L 456.4,224.4 L 469.7,227.6 L 483.1,226.0 L 496.4,237.2 L 509.8,233.5 L 523.1,231.3 L 536.5,230.8 L 549.8,229.7 L 563.2,231.9 L 576.5,242.5 L 589.8,247.8 L 603.2,241.4 L 616.5,247.3 L 629.9,258.9 L 643.2,263.7 L 656.6,261.6 L 669.9,268.0 L 683.3,284.9 L 696.6,289.7 L 710.0,299.8 L 723.3,313.1 L 736.7,326.4 L 750.0,354.5" fill="none" stroke="#9c6a6a" stroke-width="1.4" opacity="0.85" stroke-linejoin="round" stroke-linecap="round" /><circle cx="750.0" cy="354.5" r="3.5" fill="#9c6a6a" data-offense="ARS" class="overlay-endpoint-dot" /><path d="M 56.0,203.7 L 69.3,200.7 L 82.7,191.2 L 96.0,183.0 L 109.4,177.6 L 122.7,174.7 L 136.1,166.6 L 149.4,156.4 L 162.8,148.2 L 176.1,139.1 L 189.5,132.4 L 202.8,129.2 L 216.2,126.8 L 229.5,123.1 L 242.8,125.4 L 256.2,124.2 L 269.5,119.1 L 282.9,110.1 L 296.2,103.9 L 309.6,98.6 L 322.9,94.1 L 336.3,90.7 L 349.6,88.4 L 363.0,87.3 L 376.3,90.5 L 389.7,90.3 L 403.0,88.7 L 416.3,89.0 L 429.7,93.1 L 443.0,101.0 L 456.4,103.7 L 469.7,112.4 L 483.1,122.2 L 496.4,132.6 L 509.8,141.9 L 523.1,152.2 L 536.5,161.8 L 549.8,172.5 L 563.2,183.0 L 576.5,191.7 L 589.8,198.8 L 603.2,202.2 L 616.5,211.3 L 629.9,218.2 L 643.2,225.6 L 656.6,232.9 L 669.9,239.8 L 683.3,245.7 L 696.6,249.7 L 710.0,259.7 L 723.3,269.9 L 736.7,284.1 L 750.0,308.4" fill="none" stroke="#6b4a6b" stroke-width="1.4" opacity="0.85" stroke-linejoin="round" stroke-linecap="round" /><circle cx="750.0" cy="308.4" r="3.5" fill="#6b4a6b" data-offense="MVT" class="overlay-endpoint-dot" /><path d="M 56.0,203.7 L 69.3,202.4 L 82.7,198.1 L 96.0,196.5 L 109.4,193.6 L 122.7,192.2 L 136.1,188.2 L 149.4,183.0 L 162.8,183.1 L 176.1,181.1 L 189.5,181.5 L 202.8,181.5 L 216.2,184.6 L 229.5,180.6 L 242.8,178.5 L 256.2,176.7 L 269.5,175.7 L 282.9,175.3 L 296.2,176.2 L 309.6,175.2 L 322.9,176.6 L 336.3,177.0 L 349.6,175.5 L 363.0,173.4 L 376.3,169.6 L 389.7,171.5 L 403.0,173.4 L 416.3,177.4 L 429.7,179.6 L 443.0,180.6 L 456.4,178.5 L 469.7,182.9 L 483.1,184.9 L 496.4,185.8 L 509.8,187.5 L 523.1,186.2 L 536.5,191.4 L 549.8,193.7 L 563.2,194.3 L 576.5,191.2 L 589.8,193.9 L 603.2,194.0 L 616.5,198.4 L 629.9,195.7 L 643.2,192.9 L 656.6,193.4 L 669.9,195.5 L 683.3,201.2 L 696.6,203.4 L 710.0,212.4 L 723.3,222.5 L 736.7,236.6 L 750.0,263.3" fill="none" stroke="#5e6b3a" stroke-width="1.4" opacity="0.85" stroke-linejoin="round" stroke-linecap="round" /><circle cx="750.0" cy="263.3" r="3.5" fill="#5e6b3a" data-offense="ASS" class="overlay-endpoint-dot" /><path d="M 56.0,203.7 L 69.3,201.7 L 82.7,195.7 L 96.0,188.6 L 109.4,177.2 L 122.7,172.9 L 136.1,170.0 L 149.4,166.5 L 162.8,159.7 L 176.1,156.2 L 189.5,157.4 L 202.8,156.4 L 216.2,151.4 L 229.5,149.6 L 242.8,148.6 L 256.2,145.0 L 269.5,144.6 L 282.9,144.0 L 296.2,140.6 L 309.6,142.2 L 322.9,142.8 L 336.3,144.3 L 349.6,147.8 L 363.0,152.4 L 376.3,154.0 L 389.7,155.0 L 403.0,162.2 L 416.3,168.6 L 429.7,174.1 L 443.0,181.4 L 456.4,185.6 L 469.7,186.3 L 483.1,190.6 L 496.4,195.2 L 509.8,194.2 L 523.1,195.9 L 536.5,201.3 L 549.8,203.4 L 563.2,199.2 L 576.5,200.6 L 589.8,204.8 L 603.2,206.5 L 616.5,208.5 L 629.9,211.5 L 643.2,212.7 L 656.6,215.6 L 669.9,222.0 L 683.3,229.6 L 696.6,237.9 L 710.0,252.6 L 723.3,268.5 L 736.7,282.2 L 750.0,306.9" fill="none" stroke="#a37c2c" stroke-width="1.4" opacity="0.85" stroke-linejoin="round" stroke-linecap="round" /><circle cx="750.0" cy="306.9" r="3.5" fill="#a37c2c" data-offense="ROB" class="overlay-endpoint-dot" /><path d="M 56.0,203.7 L 69.3,205.3 L 82.7,205.5 L 96.0,201.1 L 109.4,204.2 L 122.7,204.6 L 136.1,209.3 L 149.4,211.3 L 162.8,214.0 L 176.1,212.3 L 189.5,210.8 L 202.8,213.4 L 216.2,212.3 L 229.5,212.9 L 242.8,211.0 L 256.2,213.2 L 269.5,207.0 L 282.9,205.0 L 296.2,204.4 L 309.6,204.4 L 322.9,206.4 L 336.3,211.6 L 349.6,212.1 L 363.0,214.0 L 376.3,219.4 L 389.7,223.1 L 403.0,225.8 L 416.3,231.1 L 429.7,235.5 L 443.0,236.7 L 456.4,238.3 L 469.7,239.9 L 483.1,242.3 L 496.4,239.8 L 509.8,240.8 L 523.1,240.4 L 536.5,243.0 L 549.8,246.1 L 563.2,252.6 L 576.5,256.7 L 589.8,259.1 L 603.2,268.5 L 616.5,272.1 L 629.9,275.9 L 643.2,277.7 L 656.6,284.4 L 669.9,293.1 L 683.3,296.5 L 696.6,302.3 L 710.0,310.3 L 723.3,316.8 L 736.7,328.1 L 750.0,350.7" fill="none" stroke="#b8222d" stroke-width="2.0" opacity="1.0" stroke-linejoin="round" stroke-linecap="round" /><circle cx="750.0" cy="350.7" r="3.5" fill="#b8222d" data-offense="RPE" class="overlay-endpoint-dot" /><path d="M 56.0,203.7 L 69.3,191.6 L 82.7,189.2 L 96.0,181.9 L 109.4,177.6 L 122.7,169.7 L 136.1,157.6 L 149.4,170.3 L 162.8,168.5 L 176.1,165.5 L 189.5,163.7 L 202.8,159.4 L 216.2,166.1 L 229.5,164.9 L 242.8,160.0 L 256.2,164.3 L 269.5,164.3 L 282.9,172.2 L 296.2,183.1 L 309.6,184.3 L 322.9,182.5 L 336.3,186.1 L 349.6,191.0 L 363.0,211.0 L 376.3,224.4 L 389.7,238.3 L 403.0,248.6 L 416.3,250.5 L 429.7,254.7 L 443.0,260.8 L 456.4,263.8 L 469.7,274.1 L 483.1,285.1 L 496.4,288.7 L 509.8,294.2 L 523.1,293.6 L 536.5,289.3 L 549.8,292.3 L 563.2,289.9 L 576.5,294.8 L 589.8,294.2 L 603.2,300.2 L 616.5,306.9 L 629.9,309.3 L 643.2,309.9 L 656.6,314.8 L 669.9,318.4 L 683.3,323.3 L 696.6,330.6 L 710.0,333.0 L 723.3,347.0 L 736.7,359.7 L 750.0,386.4" fill="none" stroke="#0a1f3d" stroke-width="2.0" opacity="1.0" stroke-linejoin="round" stroke-linecap="round" /><circle cx="750.0" cy="386.4" r="3.5" fill="#0a1f3d" data-offense="HOM" class="overlay-endpoint-dot" /><line x1="754.0" y1="263.3" x2="780.0" y2="239.0" stroke="#5e6b3a" stroke-width="0.8" opacity="0.5" /><circle cx="782.0" cy="239.0" r="2" fill="#5e6b3a" /><text x="786.0" y="243.0" class="overlay-end-label" fill="#5e6b3a" data-offense="ASS">Aggravated assault<tspan dx="6" class="overlay-end-value" fill="#5e6b3a" data-offense-value="ASS">83</tspan></text><line x1="754.0" y1="278.8" x2="780.0" y2="261.0" stroke="#8a5a48" stroke-width="0.8" opacity="0.5" /><circle cx="782.0" cy="261.0" r="2" fill="#8a5a48" /><text x="786.0" y="265.0" class="overlay-end-label" fill="#8a5a48" data-offense="LAR">Larceny<tspan dx="6" class="overlay-end-value" fill="#8a5a48" data-offense-value="LAR">79</tspan></text><line x1="754.0" y1="306.9" x2="780.0" y2="283.0" stroke="#a37c2c" stroke-width="0.8" opacity="0.5" /><circle cx="782.0" cy="283.0" r="2" fill="#a37c2c" /><text x="786.0" y="287.0" class="overlay-end-label" fill="#a37c2c" data-offense="ROB">Robbery<tspan dx="6" class="overlay-end-value" fill="#a37c2c" data-offense-value="ROB">71</tspan></text><line x1="754.0" y1="308.4" x2="780.0" y2="305.0" stroke="#6b4a6b" stroke-width="0.8" opacity="0.5" /><circle cx="782.0" cy="305.0" r="2" fill="#6b4a6b" /><text x="786.0" y="309.0" class="overlay-end-label" fill="#6b4a6b" data-offense="MVT">Motor vehicle theft<tspan dx="6" class="overlay-end-value" fill="#6b4a6b" data-offense-value="MVT">70</tspan></text><line x1="754.0" y1="350.7" x2="780.0" y2="327.0" stroke="#b8222d" stroke-width="0.8" opacity="0.5" /><circle cx="782.0" cy="327.0" r="2" fill="#b8222d" /><text x="786.0" y="331.0" class="overlay-end-label" fill="#b8222d" data-offense="RPE">Rape<tspan dx="6" class="overlay-end-value" fill="#b8222d" data-offense-value="RPE">58</tspan></text><line x1="754.0" y1="351.6" x2="780.0" y2="349.0" stroke="#4a5a6b" stroke-width="0.8" opacity="0.5" /><circle cx="782.0" cy="349.0" r="2" fill="#4a5a6b" /><text x="786.0" y="353.0" class="overlay-end-label" fill="#4a5a6b" data-offense="BUR">Burglary<tspan dx="6" class="overlay-end-value" fill="#4a5a6b" data-offense-value="BUR">58</tspan></text><line x1="754.0" y1="354.5" x2="780.0" y2="371.0" stroke="#9c6a6a" stroke-width="0.8" opacity="0.5" /><circle cx="782.0" cy="371.0" r="2" fill="#9c6a6a" /><text x="786.0" y="375.0" class="overlay-end-label" fill="#9c6a6a" data-offense="ARS">Arson<tspan dx="6" class="overlay-end-value" fill="#9c6a6a" data-offense-value="ARS">57</tspan></text><line x1="754.0" y1="386.4" x2="780.0" y2="393.0" stroke="#0a1f3d" stroke-width="0.8" opacity="0.5" /><circle cx="782.0" cy="393.0" r="2" fill="#0a1f3d" /><text x="786.0" y="397.0" class="overlay-end-label" fill="#0a1f3d" data-offense="HOM">Homicide<tspan dx="6" class="overlay-end-value" fill="#0a1f3d" data-offense-value="HOM">48</tspan></text><line id="overlay-hover-guide" x1="0" y1="28" x2="0" y2="404" stroke="#0a1f3d" stroke-width="0.8" opacity="0" stroke-dasharray="3,3" pointer-events="none" /><text id="overlay-hover-month" x="0" y="20" text-anchor="middle" class="overlay-hover-month-label" opacity="0" pointer-events="none"></text><rect id="overlay-hit-target" x="56" y="28" width="694" height="376" fill="transparent" style="cursor: crosshair;" /></svg><script type="application/json" id="overlay-chart-data">{"padLeft": 56, "padRight": 210, "padTop": 28, "padBottom": 36, "plotW": 694, "plotH": 376, "width": 960, "height": 440, "nMonths": 53, "monthLabels": ["Dec 2021", "Jan 2022", "Feb 2022", "Mar 2022", "Apr 2022", "May 2022", "Jun 2022", "Jul 2022", "Aug 2022", "Sep 2022", "Oct 2022", "Nov 2022", "Dec 2022", "Jan 2023", "Feb 2023", "Mar 2023", "Apr 2023", "May 2023", "Jun 2023", "Jul 2023", "Aug 2023", "Sep 2023", "Oct 2023", "Nov 2023", "Dec 2023", "Jan 2024", "Feb 2024", "Mar 2024", "Apr 2024", "May 2024", "Jun 2024", "Jul 2024", "Aug 2024", "Sep 2024", "Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025", "Dec 2025", "Jan 2026", "Feb 2026", "Mar 2026", "Apr 2026"], "series": {"LAR": {"name": "Larceny", "color": "#8a5a48", "points": [{"i": 0, "x": 56.0, "y": 203.7, "v": 100.0}, {"i": 1, "x": 69.3, "y": 201.8, "v": 100.6}, {"i": 2, "x": 82.7, "y": 194.0, "v": 102.8}, {"i": 3, "x": 96.0, "y": 185.4, "v": 105.2}, {"i": 4, "x": 109.4, "y": 175.9, "v": 107.9}, {"i": 5, "x": 122.7, "y": 168.4, "v": 110.1}, {"i": 6, "x": 136.1, "y": 161.4, "v": 112.0}, {"i": 7, "x": 149.4, "y": 153.9, "v": 114.2}, {"i": 8, "x": 162.8, "y": 146.9, "v": 116.2}, {"i": 9, "x": 176.1, "y": 142.9, "v": 117.3}, {"i": 10, "x": 189.5, "y": 139.7, "v": 118.2}, {"i": 11, "x": 202.8, "y": 137.2, "v": 118.9}, {"i": 12, "x": 216.2, "y": 135.5, "v": 119.4}, {"i": 13, "x": 229.5, "y": 130.2, "v": 120.9}, {"i": 14, "x": 242.8, "y": 130.3, "v": 120.9}, {"i": 15, "x": 256.2, "y": 131.0, "v": 120.7}, {"i": 16, "x": 269.5, "y": 131.9, "v": 120.4}, {"i": 17, "x": 282.9, "y": 133.2, "v": 120.1}, {"i": 18, "x": 296.2, "y": 135.9, "v": 119.3}, {"i": 19, "x": 309.6, "y": 138.7, "v": 118.5}, {"i": 20, "x": 322.9, "y": 140.1, "v": 118.1}, {"i": 21, "x": 336.3, "y": 143.5, "v": 117.1}, {"i": 22, "x": 349.6, "y": 145.6, "v": 116.5}, {"i": 23, "x": 363.0, "y": 147.4, "v": 116.0}, {"i": 24, "x": 376.3, "y": 148.2, "v": 115.8}, {"i": 25, "x": 389.7, "y": 149.9, "v": 115.3}, {"i": 26, "x": 403.0, "y": 149.5, "v": 115.4}, {"i": 27, "x": 416.3, "y": 150.6, "v": 115.1}, {"i": 28, "x": 429.7, "y": 151.6, "v": 114.8}, {"i": 29, "x": 443.0, "y": 153.2, "v": 114.4}, {"i": 30, "x": 456.4, "y": 151.4, "v": 114.9}, {"i": 31, "x": 469.7, "y": 150.0, "v": 115.3}, {"i": 32, "x": 483.1, "y": 154.0, "v": 114.1}, {"i": 33, "x": 496.4, "y": 152.4, "v": 114.6}, {"i": 34, "x": 509.8, "y": 153.0, "v": 114.4}, {"i": 35, "x": 523.1, "y": 153.7, "v": 114.2}, {"i": 36, "x": 536.5, "y": 159.1, "v": 112.7}, {"i": 37, "x": 549.8, "y": 162.3, "v": 111.8}, {"i": 38, "x": 563.2, "y": 165.2, "v": 110.9}, {"i": 39, "x": 576.5, "y": 166.8, "v": 110.5}, {"i": 40, "x": 589.8, "y": 168.7, "v": 110.0}, {"i": 41, "x": 603.2, "y": 170.3, "v": 109.5}, {"i": 42, "x": 616.5, "y": 176.2, "v": 107.8}, {"i": 43, "x": 629.9, "y": 182.3, "v": 106.1}, {"i": 44, "x": 643.2, "y": 185.9, "v": 105.1}, {"i": 45, "x": 656.6, "y": 191.4, "v": 103.5}, {"i": 46, "x": 669.9, "y": 195.8, "v": 102.3}, {"i": 47, "x": 683.3, "y": 200.7, "v": 100.9}, {"i": 48, "x": 696.6, "y": 206.8, "v": 99.1}, {"i": 49, "x": 710.0, "y": 219.5, "v": 95.5}, {"i": 50, "x": 723.3, "y": 233.4, "v": 91.6}, {"i": 51, "x": 736.7, "y": 249.9, "v": 86.9}, {"i": 52, "x": 750.0, "y": 278.8, "v": 78.6}]}, "BUR": {"name": "Burglary", "color": "#4a5a6b", "points": [{"i": 0, "x": 56.0, "y": 203.7, "v": 100.0}, {"i": 1, "x": 69.3, "y": 206.6, "v": 99.2}, {"i": 2, "x": 82.7, "y": 201.4, "v": 100.7}, {"i": 3, "x": 96.0, "y": 199.0, "v": 101.3}, {"i": 4, "x": 109.4, "y": 199.8, "v": 101.1}, {"i": 5, "x": 122.7, "y": 198.6, "v": 101.5}, {"i": 6, "x": 136.1, "y": 195.7, "v": 102.3}, {"i": 7, "x": 149.4, "y": 192.8, "v": 103.1}, {"i": 8, "x": 162.8, "y": 188.8, "v": 104.3}, {"i": 9, "x": 176.1, "y": 190.4, "v": 103.8}, {"i": 10, "x": 189.5, "y": 185.5, "v": 105.2}, {"i": 11, "x": 202.8, "y": 186.4, "v": 104.9}, {"i": 12, "x": 216.2, "y": 185.7, "v": 105.1}, {"i": 13, "x": 229.5, "y": 182.3, "v": 106.1}, {"i": 14, "x": 242.8, "y": 184.9, "v": 105.4}, {"i": 15, "x": 256.2, "y": 185.3, "v": 105.2}, {"i": 16, "x": 269.5, "y": 183.5, "v": 105.8}, {"i": 17, "x": 282.9, "y": 185.1, "v": 105.3}, {"i": 18, "x": 296.2, "y": 186.5, "v": 104.9}, {"i": 19, "x": 309.6, "y": 187.8, "v": 104.5}, {"i": 20, "x": 322.9, "y": 186.8, "v": 104.8}, {"i": 21, "x": 336.3, "y": 185.6, "v": 105.2}, {"i": 22, "x": 349.6, "y": 192.0, "v": 103.3}, {"i": 23, "x": 363.0, "y": 194.1, "v": 102.7}, {"i": 24, "x": 376.3, "y": 197.9, "v": 101.7}, {"i": 25, "x": 389.7, "y": 202.5, "v": 100.3}, {"i": 26, "x": 403.0, "y": 203.3, "v": 100.1}, {"i": 27, "x": 416.3, "y": 201.6, "v": 100.6}, {"i": 28, "x": 429.7, "y": 205.5, "v": 99.5}, {"i": 29, "x": 443.0, "y": 209.6, "v": 98.3}, {"i": 30, "x": 456.4, "y": 214.8, "v": 96.8}, {"i": 31, "x": 469.7, "y": 218.9, "v": 95.7}, {"i": 32, "x": 483.1, "y": 225.2, "v": 93.9}, {"i": 33, "x": 496.4, "y": 224.1, "v": 94.2}, {"i": 34, "x": 509.8, "y": 226.7, "v": 93.5}, {"i": 35, "x": 523.1, "y": 229.8, "v": 92.6}, {"i": 36, "x": 536.5, "y": 234.1, "v": 91.3}, {"i": 37, "x": 549.8, "y": 237.6, "v": 90.3}, {"i": 38, "x": 563.2, "y": 242.8, "v": 88.9}, {"i": 39, "x": 576.5, "y": 249.3, "v": 87.0}, {"i": 40, "x": 589.8, "y": 249.3, "v": 87.0}, {"i": 41, "x": 603.2, "y": 253.3, "v": 85.9}, {"i": 42, "x": 616.5, "y": 258.4, "v": 84.4}, {"i": 43, "x": 629.9, "y": 263.7, "v": 82.9}, {"i": 44, "x": 643.2, "y": 267.6, "v": 81.8}, {"i": 45, "x": 656.6, "y": 277.9, "v": 78.9}, {"i": 46, "x": 669.9, "y": 284.4, "v": 77.0}, {"i": 47, "x": 683.3, "y": 289.9, "v": 75.5}, {"i": 48, "x": 696.6, "y": 298.4, "v": 73.1}, {"i": 49, "x": 710.0, "y": 306.9, "v": 70.7}, {"i": 50, "x": 723.3, "y": 315.3, "v": 68.2}, {"i": 51, "x": 736.7, "y": 328.1, "v": 64.6}, {"i": 52, "x": 750.0, "y": 351.6, "v": 57.9}]}, "ARS": {"name": "Arson", "color": "#9c6a6a", "points": [{"i": 0, "x": 56.0, "y": 203.7, "v": 100.0}, {"i": 1, "x": 69.3, "y": 202.1, "v": 100.5}, {"i": 2, "x": 82.7, "y": 188.3, "v": 104.4}, {"i": 3, "x": 96.0, "y": 177.7, "v": 107.4}, {"i": 4, "x": 109.4, "y": 180.4, "v": 106.6}, {"i": 5, "x": 122.7, "y": 187.3, "v": 104.7}, {"i": 6, "x": 136.1, "y": 188.3, "v": 104.4}, {"i": 7, "x": 149.4, "y": 185.7, "v": 105.1}, {"i": 8, "x": 162.8, "y": 188.3, "v": 104.4}, {"i": 9, "x": 176.1, "y": 188.3, "v": 104.4}, {"i": 10, "x": 189.5, "y": 194.7, "v": 102.6}, {"i": 11, "x": 202.8, "y": 195.2, "v": 102.4}, {"i": 12, "x": 216.2, "y": 214.3, "v": 97.0}, {"i": 13, "x": 229.5, "y": 209.6, "v": 98.3}, {"i": 14, "x": 242.8, "y": 213.8, "v": 97.1}, {"i": 15, "x": 256.2, "y": 225.5, "v": 93.8}, {"i": 16, "x": 269.5, "y": 220.7, "v": 95.2}, {"i": 17, "x": 282.9, "y": 219.1, "v": 95.6}, {"i": 18, "x": 296.2, "y": 222.8, "v": 94.6}, {"i": 19, "x": 309.6, "y": 225.5, "v": 93.8}, {"i": 20, "x": 322.9, "y": 228.1, "v": 93.1}, {"i": 21, "x": 336.3, "y": 225.5, "v": 93.8}, {"i": 22, "x": 349.6, "y": 223.4, "v": 94.4}, {"i": 23, "x": 363.0, "y": 218.6, "v": 95.8}, {"i": 24, "x": 376.3, "y": 209.6, "v": 98.3}, {"i": 25, "x": 389.7, "y": 220.7, "v": 95.2}, {"i": 26, "x": 403.0, "y": 221.2, "v": 95.0}, {"i": 27, "x": 416.3, "y": 218.1, "v": 95.9}, {"i": 28, "x": 429.7, "y": 220.7, "v": 95.2}, {"i": 29, "x": 443.0, "y": 225.0, "v": 94.0}, {"i": 30, "x": 456.4, "y": 224.4, "v": 94.1}, {"i": 31, "x": 469.7, "y": 227.6, "v": 93.2}, {"i": 32, "x": 483.1, "y": 226.0, "v": 93.7}, {"i": 33, "x": 496.4, "y": 237.2, "v": 90.5}, {"i": 34, "x": 509.8, "y": 233.5, "v": 91.5}, {"i": 35, "x": 523.1, "y": 231.3, "v": 92.1}, {"i": 36, "x": 536.5, "y": 230.8, "v": 92.3}, {"i": 37, "x": 549.8, "y": 229.7, "v": 92.6}, {"i": 38, "x": 563.2, "y": 231.9, "v": 92.0}, {"i": 39, "x": 576.5, "y": 242.5, "v": 89.0}, {"i": 40, "x": 589.8, "y": 247.8, "v": 87.5}, {"i": 41, "x": 603.2, "y": 241.4, "v": 89.3}, {"i": 42, "x": 616.5, "y": 247.3, "v": 87.6}, {"i": 43, "x": 629.9, "y": 258.9, "v": 84.3}, {"i": 44, "x": 643.2, "y": 263.7, "v": 82.9}, {"i": 45, "x": 656.6, "y": 261.6, "v": 83.5}, {"i": 46, "x": 669.9, "y": 268.0, "v": 81.7}, {"i": 47, "x": 683.3, "y": 284.9, "v": 76.9}, {"i": 48, "x": 696.6, "y": 289.7, "v": 75.5}, {"i": 49, "x": 710.0, "y": 299.8, "v": 72.7}, {"i": 50, "x": 723.3, "y": 313.1, "v": 68.9}, {"i": 51, "x": 736.7, "y": 326.4, "v": 65.1}, {"i": 52, "x": 750.0, "y": 354.5, "v": 57.1}]}, "MVT": {"name": "Motor vehicle theft", "color": "#6b4a6b", "points": [{"i": 0, "x": 56.0, "y": 203.7, "v": 100.0}, {"i": 1, "x": 69.3, "y": 200.7, "v": 100.9}, {"i": 2, "x": 82.7, "y": 191.2, "v": 103.6}, {"i": 3, "x": 96.0, "y": 183.0, "v": 105.9}, {"i": 4, "x": 109.4, "y": 177.6, "v": 107.4}, {"i": 5, "x": 122.7, "y": 174.7, "v": 108.3}, {"i": 6, "x": 136.1, "y": 166.6, "v": 110.6}, {"i": 7, "x": 149.4, "y": 156.4, "v": 113.5}, {"i": 8, "x": 162.8, "y": 148.2, "v": 115.8}, {"i": 9, "x": 176.1, "y": 139.1, "v": 118.4}, {"i": 10, "x": 189.5, "y": 132.4, "v": 120.3}, {"i": 11, "x": 202.8, "y": 129.2, "v": 121.2}, {"i": 12, "x": 216.2, "y": 126.8, "v": 121.9}, {"i": 13, "x": 229.5, "y": 123.1, "v": 122.9}, {"i": 14, "x": 242.8, "y": 125.4, "v": 122.3}, {"i": 15, "x": 256.2, "y": 124.2, "v": 122.6}, {"i": 16, "x": 269.5, "y": 119.1, "v": 124.1}, {"i": 17, "x": 282.9, "y": 110.1, "v": 126.6}, {"i": 18, "x": 296.2, "y": 103.9, "v": 128.4}, {"i": 19, "x": 309.6, "y": 98.6, "v": 129.9}, {"i": 20, "x": 322.9, "y": 94.1, "v": 131.2}, {"i": 21, "x": 336.3, "y": 90.7, "v": 132.2}, {"i": 22, "x": 349.6, "y": 88.4, "v": 132.8}, {"i": 23, "x": 363.0, "y": 87.3, "v": 133.1}, {"i": 24, "x": 376.3, "y": 90.5, "v": 132.2}, {"i": 25, "x": 389.7, "y": 90.3, "v": 132.3}, {"i": 26, "x": 403.0, "y": 88.7, "v": 132.7}, {"i": 27, "x": 416.3, "y": 89.0, "v": 132.6}, {"i": 28, "x": 429.7, "y": 93.1, "v": 131.5}, {"i": 29, "x": 443.0, "y": 101.0, "v": 129.2}, {"i": 30, "x": 456.4, "y": 103.7, "v": 128.5}, {"i": 31, "x": 469.7, "y": 112.4, "v": 126.0}, {"i": 32, "x": 483.1, "y": 122.2, "v": 123.2}, {"i": 33, "x": 496.4, "y": 132.6, "v": 120.2}, {"i": 34, "x": 509.8, "y": 141.9, "v": 117.6}, {"i": 35, "x": 523.1, "y": 152.2, "v": 114.7}, {"i": 36, "x": 536.5, "y": 161.8, "v": 111.9}, {"i": 37, "x": 549.8, "y": 172.5, "v": 108.9}, {"i": 38, "x": 563.2, "y": 183.0, "v": 105.9}, {"i": 39, "x": 576.5, "y": 191.7, "v": 103.4}, {"i": 40, "x": 589.8, "y": 198.8, "v": 101.4}, {"i": 41, "x": 603.2, "y": 202.2, "v": 100.4}, {"i": 42, "x": 616.5, "y": 211.3, "v": 97.9}, {"i": 43, "x": 629.9, "y": 218.2, "v": 95.9}, {"i": 44, "x": 643.2, "y": 225.6, "v": 93.8}, {"i": 45, "x": 656.6, "y": 232.9, "v": 91.7}, {"i": 46, "x": 669.9, "y": 239.8, "v": 89.7}, {"i": 47, "x": 683.3, "y": 245.7, "v": 88.1}, {"i": 48, "x": 696.6, "y": 249.7, "v": 86.9}, {"i": 49, "x": 710.0, "y": 259.7, "v": 84.1}, {"i": 50, "x": 723.3, "y": 269.9, "v": 81.2}, {"i": 51, "x": 736.7, "y": 284.1, "v": 77.1}, {"i": 52, "x": 750.0, "y": 308.4, "v": 70.2}]}, "ASS": {"name": "Aggravated assault", "color": "#5e6b3a", "points": [{"i": 0, "x": 56.0, "y": 203.7, "v": 100.0}, {"i": 1, "x": 69.3, "y": 202.4, "v": 100.4}, {"i": 2, "x": 82.7, "y": 198.1, "v": 101.6}, {"i": 3, "x": 96.0, "y": 196.5, "v": 102.1}, {"i": 4, "x": 109.4, "y": 193.6, "v": 102.9}, {"i": 5, "x": 122.7, "y": 192.2, "v": 103.3}, {"i": 6, "x": 136.1, "y": 188.2, "v": 104.4}, {"i": 7, "x": 149.4, "y": 183.0, "v": 105.9}, {"i": 8, "x": 162.8, "y": 183.1, "v": 105.9}, {"i": 9, "x": 176.1, "y": 181.1, "v": 106.4}, {"i": 10, "x": 189.5, "y": 181.5, "v": 106.3}, {"i": 11, "x": 202.8, "y": 181.5, "v": 106.3}, {"i": 12, "x": 216.2, "y": 184.6, "v": 105.4}, {"i": 13, "x": 229.5, "y": 180.6, "v": 106.6}, {"i": 14, "x": 242.8, "y": 178.5, "v": 107.2}, {"i": 15, "x": 256.2, "y": 176.7, "v": 107.7}, {"i": 16, "x": 269.5, "y": 175.7, "v": 108.0}, {"i": 17, "x": 282.9, "y": 175.3, "v": 108.1}, {"i": 18, "x": 296.2, "y": 176.2, "v": 107.8}, {"i": 19, "x": 309.6, "y": 175.2, "v": 108.1}, {"i": 20, "x": 322.9, "y": 176.6, "v": 107.7}, {"i": 21, "x": 336.3, "y": 177.0, "v": 107.6}, {"i": 22, "x": 349.6, "y": 175.5, "v": 108.0}, {"i": 23, "x": 363.0, "y": 173.4, "v": 108.6}, {"i": 24, "x": 376.3, "y": 169.6, "v": 109.7}, {"i": 25, "x": 389.7, "y": 171.5, "v": 109.2}, {"i": 26, "x": 403.0, "y": 173.4, "v": 108.6}, {"i": 27, "x": 416.3, "y": 177.4, "v": 107.5}, {"i": 28, "x": 429.7, "y": 179.6, "v": 106.9}, {"i": 29, "x": 443.0, "y": 180.6, "v": 106.6}, {"i": 30, "x": 456.4, "y": 178.5, "v": 107.2}, {"i": 31, "x": 469.7, "y": 182.9, "v": 105.9}, {"i": 32, "x": 483.1, "y": 184.9, "v": 105.4}, {"i": 33, "x": 496.4, "y": 185.8, "v": 105.1}, {"i": 34, "x": 509.8, "y": 187.5, "v": 104.6}, {"i": 35, "x": 523.1, "y": 186.2, "v": 105.0}, {"i": 36, "x": 536.5, "y": 191.4, "v": 103.5}, {"i": 37, "x": 549.8, "y": 193.7, "v": 102.8}, {"i": 38, "x": 563.2, "y": 194.3, "v": 102.7}, {"i": 39, "x": 576.5, "y": 191.2, "v": 103.6}, {"i": 40, "x": 589.8, "y": 193.9, "v": 102.8}, {"i": 41, "x": 603.2, "y": 194.0, "v": 102.8}, {"i": 42, "x": 616.5, "y": 198.4, "v": 101.5}, {"i": 43, "x": 629.9, "y": 195.7, "v": 102.3}, {"i": 44, "x": 643.2, "y": 192.9, "v": 103.1}, {"i": 45, "x": 656.6, "y": 193.4, "v": 102.9}, {"i": 46, "x": 669.9, "y": 195.5, "v": 102.3}, {"i": 47, "x": 683.3, "y": 201.2, "v": 100.7}, {"i": 48, "x": 696.6, "y": 203.4, "v": 100.1}, {"i": 49, "x": 710.0, "y": 212.4, "v": 97.5}, {"i": 50, "x": 723.3, "y": 222.5, "v": 94.7}, {"i": 51, "x": 736.7, "y": 236.6, "v": 90.6}, {"i": 52, "x": 750.0, "y": 263.3, "v": 83.0}]}, "ROB": {"name": "Robbery", "color": "#a37c2c", "points": [{"i": 0, "x": 56.0, "y": 203.7, "v": 100.0}, {"i": 1, "x": 69.3, "y": 201.7, "v": 100.6}, {"i": 2, "x": 82.7, "y": 195.7, "v": 102.3}, {"i": 3, "x": 96.0, "y": 188.6, "v": 104.3}, {"i": 4, "x": 109.4, "y": 177.2, "v": 107.5}, {"i": 5, "x": 122.7, "y": 172.9, "v": 108.8}, {"i": 6, "x": 136.1, "y": 170.0, "v": 109.6}, {"i": 7, "x": 149.4, "y": 166.5, "v": 110.6}, {"i": 8, "x": 162.8, "y": 159.7, "v": 112.5}, {"i": 9, "x": 176.1, "y": 156.2, "v": 113.5}, {"i": 10, "x": 189.5, "y": 157.4, "v": 113.2}, {"i": 11, "x": 202.8, "y": 156.4, "v": 113.5}, {"i": 12, "x": 216.2, "y": 151.4, "v": 114.9}, {"i": 13, "x": 229.5, "y": 149.6, "v": 115.4}, {"i": 14, "x": 242.8, "y": 148.6, "v": 115.7}, {"i": 15, "x": 256.2, "y": 145.0, "v": 116.7}, {"i": 16, "x": 269.5, "y": 144.6, "v": 116.8}, {"i": 17, "x": 282.9, "y": 144.0, "v": 117.0}, {"i": 18, "x": 296.2, "y": 140.6, "v": 118.0}, {"i": 19, "x": 309.6, "y": 142.2, "v": 117.5}, {"i": 20, "x": 322.9, "y": 142.8, "v": 117.3}, {"i": 21, "x": 336.3, "y": 144.3, "v": 116.9}, {"i": 22, "x": 349.6, "y": 147.8, "v": 115.9}, {"i": 23, "x": 363.0, "y": 152.4, "v": 114.6}, {"i": 24, "x": 376.3, "y": 154.0, "v": 114.1}, {"i": 25, "x": 389.7, "y": 155.0, "v": 113.9}, {"i": 26, "x": 403.0, "y": 162.2, "v": 111.8}, {"i": 27, "x": 416.3, "y": 168.6, "v": 110.0}, {"i": 28, "x": 429.7, "y": 174.1, "v": 108.4}, {"i": 29, "x": 443.0, "y": 181.4, "v": 106.4}, {"i": 30, "x": 456.4, "y": 185.6, "v": 105.2}, {"i": 31, "x": 469.7, "y": 186.3, "v": 105.0}, {"i": 32, "x": 483.1, "y": 190.6, "v": 103.7}, {"i": 33, "x": 496.4, "y": 195.2, "v": 102.4}, {"i": 34, "x": 509.8, "y": 194.2, "v": 102.7}, {"i": 35, "x": 523.1, "y": 195.9, "v": 102.2}, {"i": 36, "x": 536.5, "y": 201.3, "v": 100.7}, {"i": 37, "x": 549.8, "y": 203.4, "v": 100.1}, {"i": 38, "x": 563.2, "y": 199.2, "v": 101.3}, {"i": 39, "x": 576.5, "y": 200.6, "v": 100.9}, {"i": 40, "x": 589.8, "y": 204.8, "v": 99.7}, {"i": 41, "x": 603.2, "y": 206.5, "v": 99.2}, {"i": 42, "x": 616.5, "y": 208.5, "v": 98.6}, {"i": 43, "x": 629.9, "y": 211.5, "v": 97.8}, {"i": 44, "x": 643.2, "y": 212.7, "v": 97.4}, {"i": 45, "x": 656.6, "y": 215.6, "v": 96.6}, {"i": 46, "x": 669.9, "y": 222.0, "v": 94.8}, {"i": 47, "x": 683.3, "y": 229.6, "v": 92.6}, {"i": 48, "x": 696.6, "y": 237.9, "v": 90.3}, {"i": 49, "x": 710.0, "y": 252.6, "v": 86.1}, {"i": 50, "x": 723.3, "y": 268.5, "v": 81.6}, {"i": 51, "x": 736.7, "y": 282.2, "v": 77.7}, {"i": 52, "x": 750.0, "y": 306.9, "v": 70.6}]}, "RPE": {"name": "Rape", "color": "#b8222d", "points": [{"i": 0, "x": 56.0, "y": 203.7, "v": 100.0}, {"i": 1, "x": 69.3, "y": 205.3, "v": 99.6}, {"i": 2, "x": 82.7, "y": 205.5, "v": 99.5}, {"i": 3, "x": 96.0, "y": 201.1, "v": 100.7}, {"i": 4, "x": 109.4, "y": 204.2, "v": 99.9}, {"i": 5, "x": 122.7, "y": 204.6, "v": 99.8}, {"i": 6, "x": 136.1, "y": 209.3, "v": 98.4}, {"i": 7, "x": 149.4, "y": 211.3, "v": 97.9}, {"i": 8, "x": 162.8, "y": 214.0, "v": 97.1}, {"i": 9, "x": 176.1, "y": 212.3, "v": 97.6}, {"i": 10, "x": 189.5, "y": 210.8, "v": 98.0}, {"i": 11, "x": 202.8, "y": 213.4, "v": 97.2}, {"i": 12, "x": 216.2, "y": 212.3, "v": 97.6}, {"i": 13, "x": 229.5, "y": 212.9, "v": 97.4}, {"i": 14, "x": 242.8, "y": 211.0, "v": 97.9}, {"i": 15, "x": 256.2, "y": 213.2, "v": 97.3}, {"i": 16, "x": 269.5, "y": 207.0, "v": 99.1}, {"i": 17, "x": 282.9, "y": 205.0, "v": 99.6}, {"i": 18, "x": 296.2, "y": 204.4, "v": 99.8}, {"i": 19, "x": 309.6, "y": 204.4, "v": 99.8}, {"i": 20, "x": 322.9, "y": 206.4, "v": 99.3}, {"i": 21, "x": 336.3, "y": 211.6, "v": 97.8}, {"i": 22, "x": 349.6, "y": 212.1, "v": 97.6}, {"i": 23, "x": 363.0, "y": 214.0, "v": 97.1}, {"i": 24, "x": 376.3, "y": 219.4, "v": 95.5}, {"i": 25, "x": 389.7, "y": 223.1, "v": 94.5}, {"i": 26, "x": 403.0, "y": 225.8, "v": 93.7}, {"i": 27, "x": 416.3, "y": 231.1, "v": 92.2}, {"i": 28, "x": 429.7, "y": 235.5, "v": 91.0}, {"i": 29, "x": 443.0, "y": 236.7, "v": 90.6}, {"i": 30, "x": 456.4, "y": 238.3, "v": 90.2}, {"i": 31, "x": 469.7, "y": 239.9, "v": 89.7}, {"i": 32, "x": 483.1, "y": 242.3, "v": 89.0}, {"i": 33, "x": 496.4, "y": 239.8, "v": 89.7}, {"i": 34, "x": 509.8, "y": 240.8, "v": 89.5}, {"i": 35, "x": 523.1, "y": 240.4, "v": 89.6}, {"i": 36, "x": 536.5, "y": 243.0, "v": 88.8}, {"i": 37, "x": 549.8, "y": 246.1, "v": 87.9}, {"i": 38, "x": 563.2, "y": 252.6, "v": 86.1}, {"i": 39, "x": 576.5, "y": 256.7, "v": 84.9}, {"i": 40, "x": 589.8, "y": 259.1, "v": 84.3}, {"i": 41, "x": 603.2, "y": 268.5, "v": 81.6}, {"i": 42, "x": 616.5, "y": 272.1, "v": 80.6}, {"i": 43, "x": 629.9, "y": 275.9, "v": 79.5}, {"i": 44, "x": 643.2, "y": 277.7, "v": 79.0}, {"i": 45, "x": 656.6, "y": 284.4, "v": 77.0}, {"i": 46, "x": 669.9, "y": 293.1, "v": 74.6}, {"i": 47, "x": 683.3, "y": 296.5, "v": 73.6}, {"i": 48, "x": 696.6, "y": 302.3, "v": 71.9}, {"i": 49, "x": 710.0, "y": 310.3, "v": 69.7}, {"i": 50, "x": 723.3, "y": 316.8, "v": 67.8}, {"i": 51, "x": 736.7, "y": 328.1, "v": 64.6}, {"i": 52, "x": 750.0, "y": 350.7, "v": 58.2}]}, "HOM": {"name": "Homicide", "color": "#0a1f3d", "points": [{"i": 0, "x": 56.0, "y": 203.7, "v": 100.0}, {"i": 1, "x": 69.3, "y": 191.6, "v": 103.5}, {"i": 2, "x": 82.7, "y": 189.2, "v": 104.1}, {"i": 3, "x": 96.0, "y": 181.9, "v": 106.2}, {"i": 4, "x": 109.4, "y": 177.6, "v": 107.4}, {"i": 5, "x": 122.7, "y": 169.7, "v": 109.7}, {"i": 6, "x": 136.1, "y": 157.6, "v": 113.1}, {"i": 7, "x": 149.4, "y": 170.3, "v": 109.5}, {"i": 8, "x": 162.8, "y": 168.5, "v": 110.0}, {"i": 9, "x": 176.1, "y": 165.5, "v": 110.9}, {"i": 10, "x": 189.5, "y": 163.7, "v": 111.4}, {"i": 11, "x": 202.8, "y": 159.4, "v": 112.6}, {"i": 12, "x": 216.2, "y": 166.1, "v": 110.7}, {"i": 13, "x": 229.5, "y": 164.9, "v": 111.1}, {"i": 14, "x": 242.8, "y": 160.0, "v": 112.4}, {"i": 15, "x": 256.2, "y": 164.3, "v": 111.2}, {"i": 16, "x": 269.5, "y": 164.3, "v": 111.2}, {"i": 17, "x": 282.9, "y": 172.2, "v": 109.0}, {"i": 18, "x": 296.2, "y": 183.1, "v": 105.9}, {"i": 19, "x": 309.6, "y": 184.3, "v": 105.5}, {"i": 20, "x": 322.9, "y": 182.5, "v": 106.0}, {"i": 21, "x": 336.3, "y": 186.1, "v": 105.0}, {"i": 22, "x": 349.6, "y": 191.0, "v": 103.6}, {"i": 23, "x": 363.0, "y": 211.0, "v": 97.9}, {"i": 24, "x": 376.3, "y": 224.4, "v": 94.1}, {"i": 25, "x": 389.7, "y": 238.3, "v": 90.2}, {"i": 26, "x": 403.0, "y": 248.6, "v": 87.2}, {"i": 27, "x": 416.3, "y": 250.5, "v": 86.7}, {"i": 28, "x": 429.7, "y": 254.7, "v": 85.5}, {"i": 29, "x": 443.0, "y": 260.8, "v": 83.8}, {"i": 30, "x": 456.4, "y": 263.8, "v": 82.9}, {"i": 31, "x": 469.7, "y": 274.1, "v": 80.0}, {"i": 32, "x": 483.1, "y": 285.1, "v": 76.9}, {"i": 33, "x": 496.4, "y": 288.7, "v": 75.8}, {"i": 34, "x": 509.8, "y": 294.2, "v": 74.3}, {"i": 35, "x": 523.1, "y": 293.6, "v": 74.4}, {"i": 36, "x": 536.5, "y": 289.3, "v": 75.6}, {"i": 37, "x": 549.8, "y": 292.3, "v": 74.8}, {"i": 38, "x": 563.2, "y": 289.9, "v": 75.5}, {"i": 39, "x": 576.5, "y": 294.8, "v": 74.1}, {"i": 40, "x": 589.8, "y": 294.2, "v": 74.3}, {"i": 41, "x": 603.2, "y": 300.2, "v": 72.5}, {"i": 42, "x": 616.5, "y": 306.9, "v": 70.6}, {"i": 43, "x": 629.9, "y": 309.3, "v": 69.9}, {"i": 44, "x": 643.2, "y": 309.9, "v": 69.8}, {"i": 45, "x": 656.6, "y": 314.8, "v": 68.4}, {"i": 46, "x": 669.9, "y": 318.4, "v": 67.4}, {"i": 47, "x": 683.3, "y": 323.3, "v": 66.0}, {"i": 48, "x": 696.6, "y": 330.6, "v": 63.9}, {"i": 49, "x": 710.0, "y": 333.0, "v": 63.2}, {"i": 50, "x": 723.3, "y": 347.0, "v": 59.2}, {"i": 51, "x": 736.7, "y": 359.7, "v": 55.6}, {"i": 52, "x": 750.0, "y": 386.4, "v": 48.0}]}}}</script>
+                    <div id="overlay-tooltip" class="overlay-tooltip" aria-hidden="true"></div>
                 </div>
             </div>
         </section>
@@ -147,12 +187,13 @@
         <section class="section section-paper-darker">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Reporting agencies</h2>
-                    <span class="section-meta">Local PDs and sheriffs in Virginia</span>
+                    <h2 class="section-title">What this data says</h2>
                 </div>
-                <div class="agencies-placeholder">
-                    <p>The UnsolvedWatch agency directory is being built. Once complete, this section will list every police department and sheriff's office in Virginia, with their FBI reporting status and recent homicide clearance rates.</p>
-                    <p class="placeholder-note">Want to see this faster? <a href="mailto:hello@unsolvedwatch.live">Reach out.</a></p>
+                <div class="narrative">
+                    <p>Virginia reported <strong>278 homicides</strong> in the trailing 12 months — a rate of <strong>3.2 per 100,000 residents</strong>. That's a <strong>35.3% decrease</strong> compared to the prior 12-month window.</p>
+<p>Virginia's rate sits near the national median. It ranks <strong>#27 of 51</strong> states by homicides per capita (1 = highest). The national median across all states is 3.2 per 100,000.</p>
+<p>Other notable year-over-year shifts: <strong>rape is down 31.0%</strong>, <strong>robbery is down 29.1%</strong>, <strong>aggravated assault is down 19.2%</strong>.</p>
+<p class='narrative-meta'>All figures are pulled directly from the FBI's Crime Data Explorer, which aggregates monthly submissions from local law enforcement agencies. Numbers reflect offenses reported to police — not all crime, and not crime that was solved. Rate calculations use 2024 U.S. Census Bureau population estimates.</p>
                 </div>
             </div>
         </section>
@@ -178,5 +219,130 @@
             <p class="footer-line"><a href="/">unsolvedwatch.live</a> · <a href="https://courtwatch.live">courtwatch.live</a></p>
         </div>
     </footer>
+
+    <script>
+    (function() {
+        var dataScript = document.getElementById('overlay-chart-data');
+        if (!dataScript) return;
+        var data;
+        try { data = JSON.parse(dataScript.textContent); } catch (e) { return; }
+
+        var wrap = document.getElementById('overlay-chart-wrap');
+        var svg = wrap && wrap.querySelector('svg.overlay-chart');
+        var hitTarget = document.getElementById('overlay-hit-target');
+        var guide = document.getElementById('overlay-hover-guide');
+        var hoverMonth = document.getElementById('overlay-hover-month');
+        var tooltip = document.getElementById('overlay-tooltip');
+        if (!svg || !hitTarget || !tooltip) return;
+
+        // Capture the "latest" values so we can restore them on mouseout
+        var latestValues = {};
+        Object.keys(data.series).forEach(function(code) {
+            var pts = data.series[code].points;
+            latestValues[code] = pts[pts.length - 1].v;
+        });
+
+        // Build tooltip rows once. Order by current value descending.
+        var sortedCodes = Object.keys(data.series).sort(function(a, b) {
+            return latestValues[b] - latestValues[a];
+        });
+        tooltip.innerHTML = sortedCodes.map(function(code) {
+            var s = data.series[code];
+            return '<div class="overlay-tooltip-row" data-tt-row="' + code + '">' +
+                   '<span class="overlay-tooltip-swatch" style="background:' + s.color + '"></span>' +
+                   '<span class="overlay-tooltip-name">' + s.name + '</span>' +
+                   '<span class="overlay-tooltip-value" data-tt-value="' + code + '">' +
+                   Math.round(latestValues[code]) + '</span>' +
+                   '</div>';
+        }).join('');
+
+        function getSvgPoint(evt) {
+            var pt = svg.createSVGPoint();
+            pt.x = evt.clientX;
+            pt.y = evt.clientY;
+            return pt.matrixTransform(svg.getScreenCTM().inverse());
+        }
+
+        function findNearestMonth(svgX) {
+            var rel = (svgX - data.padLeft) / data.plotW;
+            var idx = Math.round(rel * (data.nMonths - 1));
+            return Math.max(0, Math.min(data.nMonths - 1, idx));
+        }
+
+        function updateForMonth(monthIdx, clientX, clientY) {
+            var label = data.monthLabels[monthIdx];
+            var xAtMonth = data.padLeft + (monthIdx / (data.nMonths - 1)) * data.plotW;
+
+            guide.setAttribute('x1', xAtMonth);
+            guide.setAttribute('x2', xAtMonth);
+            guide.setAttribute('opacity', '0.4');
+
+            hoverMonth.setAttribute('x', xAtMonth);
+            hoverMonth.textContent = label;
+            hoverMonth.setAttribute('opacity', '0.85');
+
+            Object.keys(data.series).forEach(function(code) {
+                var pts = data.series[code].points;
+                var pt = pts[monthIdx];
+                if (!pt) return;
+                var valEl = svg.querySelector('[data-offense-value="' + code + '"]');
+                if (valEl) valEl.textContent = Math.round(pt.v);
+                var ttValEl = tooltip.querySelector('[data-tt-value="' + code + '"]');
+                if (ttValEl) ttValEl.textContent = Math.round(pt.v);
+            });
+
+            var codes = Object.keys(data.series);
+            codes.sort(function(a, b) {
+                return data.series[b].points[monthIdx].v - data.series[a].points[monthIdx].v;
+            });
+            codes.forEach(function(code, i) {
+                var row = tooltip.querySelector('[data-tt-row="' + code + '"]');
+                if (row) row.style.order = i;
+            });
+
+            var wrapRect = wrap.getBoundingClientRect();
+            var tooltipW = tooltip.offsetWidth || 180;
+            var tooltipH = tooltip.offsetHeight || 200;
+            var localX = clientX - wrapRect.left;
+            var localY = clientY - wrapRect.top;
+            var ttX = localX + 16;
+            var ttY = localY - tooltipH / 2;
+            if (ttX + tooltipW > wrapRect.width - 4) {
+                ttX = localX - tooltipW - 16;
+            }
+            ttY = Math.max(4, Math.min(wrapRect.height - tooltipH - 4, ttY));
+            tooltip.style.left = ttX + 'px';
+            tooltip.style.top = ttY + 'px';
+            tooltip.classList.add('is-visible');
+        }
+
+        function resetToLatest() {
+            guide.setAttribute('opacity', '0');
+            hoverMonth.setAttribute('opacity', '0');
+            tooltip.classList.remove('is-visible');
+            Object.keys(data.series).forEach(function(code) {
+                var valEl = svg.querySelector('[data-offense-value="' + code + '"]');
+                if (valEl) valEl.textContent = Math.round(latestValues[code]);
+            });
+        }
+
+        hitTarget.addEventListener('mousemove', function(evt) {
+            var pt = getSvgPoint(evt);
+            var monthIdx = findNearestMonth(pt.x);
+            updateForMonth(monthIdx, evt.clientX, evt.clientY);
+        });
+
+        hitTarget.addEventListener('mouseleave', resetToLatest);
+
+        hitTarget.addEventListener('touchmove', function(evt) {
+            if (!evt.touches.length) return;
+            evt.preventDefault();
+            var touch = evt.touches[0];
+            var pt = getSvgPoint(touch);
+            var monthIdx = findNearestMonth(pt.x);
+            updateForMonth(monthIdx, touch.clientX, touch.clientY);
+        }, {passive: false});
+    })();
+    </script>
 </body>
 </html>
