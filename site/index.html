@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UnsolvedWatch — Crime Data Transparency</title>
-    <meta name="description" content="Tracking FBI crime data and police reporting gaps across all 50 states. A civic accountability project.">
+    <title>UnsolvedWatch — American Crime Data Accountability</title>
+    <meta name="description" content="An accountability project tracking FBI crime data and police reporting gaps across all 50 states. America deserves accurate data about itself.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,500;1,6..72,700;1,6..72,800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <header class="site-header">
+    <header class="masthead">
         <div class="container">
-            <a href="/" class="logo">
-                <span class="logo-mark">▢</span>
-                <span class="logo-text">UnsolvedWatch</span>
+            <a href="/" class="brand">
+                <span class="brand-mark"></span>
+                <span class="brand-text">UnsolvedWatch</span>
             </a>
-            <nav>
+            <nav class="nav">
                 <a href="/states/">States</a>
                 <a href="/agencies/">Agencies</a>
                 <a href="/gap/">The Gap</a>
@@ -31,7 +31,7 @@
     <main>
         <section class="hero">
             <div class="container">
-                <div class="hero-label">CIVIC ACCOUNTABILITY · CRIME DATA TRANSPARENCY</div>
+                <div class="hero-eyebrow">An American Accountability Project</div>
                 <h1 class="hero-title">
                     <span class="line">The FBI tracks every</span>
                     <span class="line">crime in America.</span>
@@ -39,8 +39,7 @@
                     <span class="line accent">never get reported.</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Police reporting to the FBI is voluntary. Hundreds of agencies — including major metropolitan
-                    departments — have stopped submitting data. We track what's missing.
+                    Police reporting to the FBI is voluntary. Hundreds of agencies — including major metropolitan departments — have stopped submitting data. <em>America deserves accurate data about itself.</em> We track what's missing.
                 </p>
                 <div class="hero-stats" id="hero-stats">
                     <div class="stat">
@@ -59,10 +58,72 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="how-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Latest crime data by state</h2>
+                    <h2>How this works</h2>
+                    <span class="section-eyebrow">Open · Auditable · Continuous</span>
+                </div>
+                <div class="grid-3">
+                    <div class="card">
+                        <div class="card-num">01 — Source</div>
+                        <h3>FBI Crime Data Explorer</h3>
+                        <p>We pull directly from the FBI's official Crime Data Explorer API for all 50 states and the District of Columbia, covering eight major offense categories from 1985 to present.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-num">02 — Refresh</div>
+                        <h3>Automated weekly scrape</h3>
+                        <p>An automated process checks the FBI's data daily and pulls fresh records every Monday morning. Every scrape is logged, timestamped, and publicly auditable.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-num">03 — Watch</div>
+                        <h3>Gap detection</h3>
+                        <p>When agencies stop reporting, we flag them. When agencies issue press releases that conflict with their FBI submissions, that becomes a matter of public record.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>The State of <span class="red">American</span> Crime</h2>
+                    <span class="section-eyebrow">Trailing 12 months · Homicides per 100k</span>
+                </div>
+                <div class="map-wrap">
+                    <div id="us-map">
+                        <div class="loading">Loading map…</div>
+                    </div>
+                    <aside class="map-info" id="map-info">
+                        <div class="map-info-eyebrow">Hover a state</div>
+                        <div class="map-info-title">Explore the map</div>
+                        <p class="map-info-body">
+                            Each state is colored by homicide rate per 100,000 people, trailing 12 months. Hover for details. Click for the full state breakdown.
+                        </p>
+                        <div class="map-legend">
+                            <span>Lower</span>
+                            <div class="legend-swatches">
+                                <span style="background: var(--map-1);"></span>
+                                <span style="background: var(--map-2);"></span>
+                                <span style="background: var(--map-3);"></span>
+                                <span style="background: var(--map-4);"></span>
+                                <span style="background: var(--map-5);"></span>
+                            </div>
+                            <span>Higher</span>
+                        </div>
+                        <div class="map-info-meta">
+                            Source: FBI Crime Data Explorer<br>
+                            Population: US Census Bureau
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-paper-darker">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Every state, every month</h2>
                     <a href="/states/" class="link-arrow">View all states →</a>
                 </div>
                 <div class="state-grid" id="state-grid">
@@ -71,45 +132,17 @@
             </div>
         </section>
 
-        <section class="section section-dark">
+        <section class="section">
             <div class="container">
                 <div class="callout">
-                    <div class="callout-eyebrow">THE REPORTING GAP</div>
+                    <div class="callout-eyebrow">The Reporting Gap</div>
                     <h2 class="callout-title">
                         When a police department stops reporting, that's the story.
                     </h2>
                     <p class="callout-body">
-                        FBI reporting is voluntary. After the bureau retired its old SRS system in 2021 and
-                        switched fully to NIBRS, many large agencies failed to make the transition — and have
-                        not submitted national crime data since. Some agencies issue self-reported numbers in
-                        press releases while sending nothing to the FBI. This site exists to show both.
+                        FBI reporting is voluntary. After the bureau retired its old SRS system in 2021 and switched fully to NIBRS, many large agencies failed to make the transition — and <strong>have not submitted national crime data since.</strong> Some agencies issue self-reported numbers in press releases while sending nothing to the FBI. This site exists to show both.
                     </p>
                     <a href="/gap/" class="btn">See agencies that stopped reporting →</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>How this works</h2>
-                </div>
-                <div class="grid-3">
-                    <div class="card">
-                        <div class="card-num">01</div>
-                        <h3>FBI Crime Data Explorer</h3>
-                        <p>We pull from the FBI's official Crime Data Explorer API for all 50 states and the District of Columbia, covering eight major offense categories from 1985 to present.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-num">02</div>
-                        <h3>Continuous monitoring</h3>
-                        <p>An automated process checks the FBI's data daily and pulls fresh records as soon as the bureau updates. Every scrape is logged and auditable.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-num">03</div>
-                        <h3>Gap detection</h3>
-                        <p>When agencies stop reporting, we flag them. When agencies issue press releases that conflict with their FBI submissions, that becomes a public record.</p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -119,11 +152,11 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <div class="logo">
-                        <span class="logo-mark">▢</span>
-                        <span class="logo-text">UnsolvedWatch</span>
+                    <div class="brand">
+                        <span class="brand-mark"></span>
+                        <span class="brand-text">UnsolvedWatch</span>
                     </div>
-                    <p class="footer-tagline">A civic accountability project by Shadow Vortex LLC.</p>
+                    <p class="footer-tagline">An American civic accountability project. Operated by Shadow Vortex LLC.</p>
                 </div>
                 <div>
                     <h4>Civic Tools Network</h4>
@@ -133,7 +166,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4>Data</h4>
+                    <h4>Data Sources</h4>
                     <ul>
                         <li><a href="https://cde.ucr.cjis.gov" target="_blank" rel="noopener">FBI Crime Data Explorer</a></li>
                         <li><a href="/methodology/">Methodology</a></li>
@@ -149,6 +182,7 @@
     </footer>
 
     <script type="module" src="/js/config.js"></script>
+    <script type="module" src="/js/map.js"></script>
     <script type="module" src="/js/index.js"></script>
 </body>
 </html>

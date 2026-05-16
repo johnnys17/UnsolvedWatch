@@ -37,7 +37,7 @@ async function loadStats() {
     const footerEl = document.getElementById('footer-refresh')
     if (footerEl) {
         footerEl.textContent = refresh
-            ? `FBI data last refreshed: ${refresh} · Site scraped: ${new Date(runs[0].started_at).toLocaleDateString()}`
+            ? `FBI data last refreshed ${refresh}  ·  Site updated ${new Date(runs[0].started_at).toLocaleDateString()}`
             : 'Awaiting first scrape'
     }
 }
@@ -47,8 +47,8 @@ async function loadStateGrid() {
     if (!grid) return
 
     const now = new Date()
-    const cutoffYear = now.getFullYear() - (now.getMonth() < 2 ? 2 : 1)
-    const cutoffMonth = now.getMonth() < 2 ? now.getMonth() + 11 : now.getMonth() - 1
+    const cutoffYear = now.getFullYear() - 1
+    const cutoffMonth = now.getMonth() + 1
 
     const rows = await sbQuery('crime_data', {
         'select': 'state_abbr,period_year,period_month,offenses_count',
@@ -77,15 +77,15 @@ async function loadStateGrid() {
         const hasData = d && d.count > 0
         const periodStr = hasData ? fmtPeriod(d.latestYear, d.latestMonth) : '—'
         const total = hasData ? fmtNum(d.total) : '—'
-        const noDataNote = hasData
-            ? ''
-            : '<span style="color: var(--accent-2); font-size: 0.7rem; font-style: italic;">no recent data reported</span>'
         return `
             <a href="/states/${abbr.toLowerCase()}/" class="state-card">
                 <div class="state-card-abbr">${abbr}</div>
                 <div class="state-card-name">${name}</div>
                 <div class="state-card-stat">
-                    ${hasData ? `<strong>${total}</strong> homicides<br><span style="color: var(--ink-3); font-size: 0.75rem;">trailing 12 months · thru ${periodStr}</span>` : noDataNote}
+                    ${hasData
+                        ? `<strong>${total}</strong> homicides<div class="state-card-meta">Trailing 12mo · thru ${periodStr}</div>`
+                        : `<div class="state-card-nodata">No recent data reported</div>`
+                    }
                 </div>
             </a>
         `
@@ -94,4 +94,3 @@ async function loadStateGrid() {
 
 loadStats().catch(console.error)
 loadStateGrid().catch(console.error)
-

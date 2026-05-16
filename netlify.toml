@@ -21,13 +21,11 @@
   [headers.values]
     Cache-Control = "public, max-age=300, must-revalidate"
 
-# Pretty URLs: /states/fl/ → /states/fl/index.html
+# Static state pages live at /site/states/{abbr}/index.html — no redirects needed.
+# Netlify automatically serves index.html for directory requests.
+
+# Pretty URLs without trailing slash: /states/fl → /states/fl/
 [[redirects]]
   from = "/states/:abbr"
-  to = "/states/state.html?abbr=:abbr"
-  status = 200
-
-[[redirects]]
-  from = "/agencies/:ori"
-  to = "/agencies/agency.html?ori=:ori"
-  status = 200
+  to = "/states/:abbr/"
+  status = 301
