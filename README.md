@@ -2,7 +2,7 @@
 
 Civic accountability project tracking FBI crime data and police reporting gaps across all 50 states.
 
-Part of the Civic Tools Network alongside [CourtWatch.live](https://courtwatch.live). Built by Shadow Vortex LLC.
+Part of the Civic Tools Network alongside [CourtWatch.live](https://courtwatch.live). Built by Shadow Vortex.
 
 ## Architecture
 
